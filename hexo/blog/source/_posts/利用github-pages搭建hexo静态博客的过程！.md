@@ -4,6 +4,8 @@ date: 2019-05-22 12:35:22
 tags:
     - 博客
     - Github Pages
+categories:
+    - Hexo
 ---
 
 ![](/assets/blogImg/linian.jpg)
@@ -28,9 +30,21 @@ $ npm install hexo-cli -g
 $ hexo init blog
 $ cd blog
 $ npm install
+
+```
+新建完成后，指定文件夹目录下有：
+- node_modules: 依赖包
+- public：存放生成的页面
+- scaffolds：生成文章的一些模板
+- source：用来存放你的文章
+- themes：主题
+- _config.yml: 博客的配置文件
+
+```
 $ hexo g # 或者hexo generate 是生成静态文件，会在当前目录下生成一个新的叫做public的文件夹
 $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看。  hexo server (hexo s) 是启动本地web服务，用于博客的预览
 ```
+
 另外还有其他几个常用命令：
 ```
 $ hexo new "postName" #新建文章
@@ -38,12 +52,13 @@ $ hexo new page "pageName" #新建页面
 $ hexo d -g #生成部署
 $ hexo s -g #生成预览
 ```
+
 现在我们打开http://localhost:4000/ 已经可以看到一篇内置的blog了。
 
 # 三、hexo主题
 1. 我这里用的主题是yilia，安装完成的默认主题是landscape.    
 ```
-$ hexo clean
+$ hexo clean #清除之前生成的东西
 $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 ```
 2. 修改Hexo目录下的_config.yml配置文件中的theme属性，将其设置为yilia。
@@ -55,7 +70,10 @@ $ hexo g # 生成
 $ hexo s # 启动本地web服务器
 ```
 打开http://localhost:4000/ ，你会看到我们一个新的主题。
-yilia 主题配置参考[官方文档](https://github.com/litten/hexo-theme-yilia)
+> yilia 主题配置参考[官方文档](https://github.com/litten/hexo-theme-yilia)
+> ***Hexo主题配置(根目录_config.yml文件)***
+
+更多主题参看[hexo主题官网](https://hexo.io/themes/)
 
 # 四、hexo插件
  1. 建立RSS订阅需要安装
@@ -68,6 +86,7 @@ $ npm install hexo-generator-sitemap --save
 ```
 更多插件参考[插件官网](https://hexo.io/plugins/).
 
+> 想要给网站添加图片？请把图片放入根目录 source\ 下建立一个文件夹，当你执行hexo g的时候此文件夹自动生成到public中。
 
 # 五、部署hexo
 1. 使用命令hexo deploy进行部署。它可以部署很多平台，具体请参考[官方文档](https://hexo.io/docs/deployment.html) 。我这里以部署到git为例：
@@ -88,3 +107,8 @@ $ hexo deploy #或者hexo d(hexo deploy的简写) 再或者hexo d -g (生成部�
 ```
 5. 最后访问https://yourname.github.io 就可以查看博客的内容了。还可以通过hexo new "postName" 命令创建新文章。
 
+# 参考文献
+> [使用hexo，如果换了电脑怎么更新博客？](https://www.zhihu.com/question/21193762)
+> [Markdown——入门指南](https://www.jianshu.com/p/1e402922ee32/)
+> [手把手教你使用Hexo + Github Pages搭建个人独立博客](https://segmentfault.com/a/1190000004947261)
+> [Hexo搭建GitHub博客—打造炫酷的NexT主题--高级(三)](https://eirunye.github.io/2018/09/02/Hexo%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2%E2%80%94%E6%89%93%E9%80%A0%E7%82%AB%E9%85%B7%E7%9A%84Next%E4%B8%BB%E9%A2%98%E2%80%94%E9%AB%98%E7%BA%A7%E2%80%94%E4%B8%89/#more)
