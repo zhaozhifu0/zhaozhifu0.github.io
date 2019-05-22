@@ -57,7 +57,19 @@ $ hexo s # 启动本地web服务器
 打开http://localhost:4000/ ，你会看到我们一个新的主题。
 yilia 主题配置参考[官方文档](https://github.com/litten/hexo-theme-yilia)
 
-# 四、部署hexo
+# 四、hexo插件
+ 1. 建立RSS订阅需要安装
+```
+$ npm install hexo-generator-feed --save
+```
+2.建立站点地图需要安装
+```
+$ npm install hexo-generator-sitemap --save
+```
+更多插件参考[插件官网](https://hexo.io/plugins/).
+
+
+# 五、部署hexo
 1. 使用命令hexo deploy进行部署。它可以部署很多平台，具体请参考[官方文档](https://hexo.io/docs/deployment.html) 。我这里以部署到git为例：
 2. 安装 hexo-deployer-git.
 ```
@@ -75,3 +87,4 @@ deploy:
 $ hexo deploy #或者hexo d(hexo deploy的简写) 再或者hexo d -g (生成部署)
 ```
 5. 最后访问https://yourname.github.io 就可以查看博客的内容了。还可以通过hexo new "postName" 命令创建新文章。
+
