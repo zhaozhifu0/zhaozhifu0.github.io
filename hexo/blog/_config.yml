@@ -6,14 +6,14 @@
 title: 无聊才读书的博客
 subtitle: 前端工程师
 description: 无聊才读书的博客  “记录个人所思所想！！！”
-keywords:
+keywords: 无聊才读书的博客
 author: 无聊才读书
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+# url: http://zhaozf.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

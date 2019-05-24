@@ -112,3 +112,6 @@ $ hexo deploy #或者hexo d(hexo deploy的简写) 再或者hexo d -g (生成部�
 > [Markdown——入门指南](https://www.jianshu.com/p/1e402922ee32/)
 > [手把手教你使用Hexo + Github Pages搭建个人独立博客](https://segmentfault.com/a/1190000004947261)
 > [Hexo搭建GitHub博客—打造炫酷的NexT主题--高级(三)](https://eirunye.github.io/2018/09/02/Hexo%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2%E2%80%94%E6%89%93%E9%80%A0%E7%82%AB%E9%85%B7%E7%9A%84Next%E4%B8%BB%E9%A2%98%E2%80%94%E9%AB%98%E7%BA%A7%E2%80%94%E4%B8%89/#more)
+
+# 其他扩展
+[为什么我选择用 Github issues 来写博客](https://juejin.im/post/5ce53de85188252d46797fee)
