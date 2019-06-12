@@ -4,16 +4,16 @@
 
 # Site
 title: 无聊才读书的博客
-subtitle: 前端工程师
+subtitle: "一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。"
 description: 无聊才读书的博客  “记录个人所思所想！！！”
-keywords: 无聊才读书的博客
+keywords: "无聊才读书的博客"
 author: 无聊才读书
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-# url: http://zhaozf.site
+url: https://zhaozf.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: demo/**/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -82,7 +82,18 @@ deploy:
   repo: git@github.com:zhaozhifu0/zhaozhifu0.github.io.git
   branch: master
 
+#站点地图
+#sitemap:
+##    path: sitemap.xml
+##    template: ./sitemap_template.xml
+Plugins:
+- hexo-generator-baidu-sitemap
+- hexo-generator-sitemap
 
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
 
 
 jsonContent:

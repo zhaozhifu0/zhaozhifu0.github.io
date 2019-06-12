@@ -28,7 +28,7 @@ $ sudo apt-get install git
 如果是其他版本的Linux可以通过源码安装。
 
 先从官网下载源码，然后解压，依次输入：./config , make , sudo make install这几个命令。
-
+<!--more-->
 ##### 2.在Mac OS 上安装git
 
 在Mac上安装推荐从APPSTORE安装。
@@ -42,9 +42,10 @@ $ sudo apt-get install git
 3.  然后在命令行里配置你的用户名和email地址。
 
 ```
-$ git config --global "youname"
-$ git config --global "youemail" 
+$ git config --global user.name "youname"
+$ git config --global user.eamil "youemail" 
 ```
+
 
 ### 二、创建仓库
 

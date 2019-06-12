@@ -12,7 +12,7 @@ title: About me
  </center>
  <font face="STCAIYUN" color=green ><p align="right">胸藏文墨怀若谷，腹有诗书气自华.&nbsp;&nbsp;</p></font>
 <center> 
- <img src="assets/phone-solid.svg" width="18px">&nbsp;182XXXXXXXX         · <img src="assets/envelope-solid.svg" width="18px">&nbsp;zouxin9@foxmail.com         · <img src="assets/github-brands.svg" width="18px"><a href="https://github.com/zhaozhifu0">&nbsp;zhaozhifu0</a>
+ <img src="assets/phone-solid.svg" width="18px">&nbsp;18244099XXX         · <img src="assets/envelope-solid.svg" width="18px">&nbsp;zouxin9@foxmail.com         · <img src="assets/github-brands.svg" width="18px"><a href="https://github.com/zhaozhifu0">&nbsp;zhaozhifu0</a>
 </center>
 
  ## <img src="assets/info-circle-solid.svg" width="30px"> 个人信息 
@@ -45,13 +45,13 @@ title: About me
 
 ## <img src="assets/tools-solid.svg" width="30px"> 技能清单
 
-- ★★★ Java
-- ★★☆ C++、Python
-- ★★★ MySQL
-- ★★★ Redis
-- ★★☆ Spring
-- ★☆☆ RabbitMQ、ZooKeeper
+- ★★★ HTML5
+- ★★☆ CSS3
 - ★★★ JavaScript
 - ★★★ 微信小程序
 - ★★★ Vue & React
-- ★☆☆ Node.js
+- ★★☆ Node.js
+- ★★☆ Linux
+- ★☆☆ MySQL
+- ★☆☆ Java
+- ★☆☆ C、Python
