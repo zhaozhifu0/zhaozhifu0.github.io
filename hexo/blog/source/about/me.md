@@ -12,14 +12,14 @@ title: About me
  </center>
  <font face="STCAIYUN" color=green ><p align="right">胸藏文墨怀若谷，腹有诗书气自华.&nbsp;&nbsp;</p></font>
 <center> 
- <img src="assets/phone-solid.svg" width="18px">&nbsp;18244099XXX         · <img src="assets/envelope-solid.svg" width="18px">&nbsp;zouxin9@foxmail.com         · <img src="assets/github-brands.svg" width="18px"><a href="https://github.com/zhaozhifu0">&nbsp;zhaozhifu0</a>
+ <img src="assets/phone-solid.svg" width="18px">&nbsp;18244099522         · <img src="assets/envelope-solid.svg" width="18px">&nbsp;zouxin9@foxmail.com     · <img src="assets/github-brands.svg" width="18px"><a href="https://github.com/zhaozhifu0">&nbsp;zhaozhifu0</a> <br><center>&nbsp;&nbsp;&nbsp;&nbsp;zhaozhifu08@gmail.com </center>
 </center>
 
  ## <img src="assets/info-circle-solid.svg" width="30px"> 个人信息 
 
  - 男，1994 年出生
  - 求职意向：前端工程师
- - 工作经验：5 年（校招可不填）
+ - 工作经验：1 年（校招可不填）
  - 期望薪资：0k（校招可不填）
 
 ## <img src="assets/graduation-cap-solid.svg" width="30px"> 教育经历
@@ -55,3 +55,14 @@ title: About me
 - ★☆☆ MySQL
 - ★☆☆ Java
 - ★☆☆ C、Python
+
+
+- 熟悉 JavaScript 核心基础；掌握 ES6 常用语法；
+- 懂得使用 Vue.js 框架开发项目，~~ 了解 Vue.js 全家桶；~~
+- 懂得使用 Bootstrap，~~ AntD 等前端 UI 框架，了解 Sass，Stylus 等 CSS 预处理器；~~
+- 懂得使用 Git，SVN 等工具的常用操作来进行团队合作开发；
+- 懂得使用 Webpack 对项目进行模块打包并了解过其原理；
+- 了解 Node,js，使用过 Koa2 和 MySQL 并开发过小型项目；
+- 了解 Trao 多端开发；
+- 了解微信公众号开发；
+- 了解云服务器的基本搭建部署和运作流程。
