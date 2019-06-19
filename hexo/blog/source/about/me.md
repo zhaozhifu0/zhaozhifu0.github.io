@@ -57,12 +57,12 @@ title: About me
 - ★☆☆ C、Python
 
 
-- 熟悉 JavaScript 核心基础；掌握 ES6 常用语法；
-- 懂得使用 Vue.js 框架开发项目，~~ 了解 Vue.js 全家桶；~~
-- 懂得使用 Bootstrap，~~ AntD 等前端 UI 框架，了解 Sass，Stylus 等 CSS 预处理器；~~
-- 懂得使用 Git，SVN 等工具的常用操作来进行团队合作开发；
-- 懂得使用 Webpack 对项目进行模块打包并了解过其原理；
-- 了解 Node,js，使用过 Koa2 和 MySQL 并开发过小型项目；
-- 了解 Trao 多端开发；
-- 了解微信公众号开发；
-- 了解云服务器的基本搭建部署和运作流程。
+-  熟悉 JavaScript 核心基础；掌握 ES6 常用语法；
+-  懂得使用 Vue.js 框架开发项目，~~ 了解 Vue.js 全家桶；~~
+-  懂得使用 Bootstrap，~~ AntD 等前端 UI 框架，了解 Sass，Stylus 等 CSS 预处理器；~~
+-  懂得使用 Git，SVN 等工具的常用操作来进行团队合作开发；
+-  懂得使用 Webpack 对项目进行模块打包并了解过其原理；
+-  了解 Node,js，使用过 Koa2 和 MySQL 并开发过小型项目；
+-  了解 Trao 多端开发；
+-  了解微信公众号开发；
+-  了解云服务器的基本搭建部署和运作流程。
