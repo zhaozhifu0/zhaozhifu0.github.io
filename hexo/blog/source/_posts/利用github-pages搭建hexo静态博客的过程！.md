@@ -1,6 +1,7 @@
 ---
 title: 利用github pages搭建hexo静态博客过程！
 date: 2019-05-22 12:35:22
+toc: true
 tags:
     - 博客
     - Github Pages
@@ -134,6 +135,53 @@ tags:
     - Github Pages
 ---
 ```
+# 八、其他
+
+## 文章如何显示摘要
+点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数。
+解决办法：在你 MD 格式文章正文插入 <!-- more -->即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，重复
+
+```
+# excerpt_link: more
+```
+
+## 文章显示目录
+增加文章目录 TOC(table of content )，方便阅读文章, 在 themes/yilia/_config.ym中进行配置 toc: 2即可，它会将你 Markdown 语法的标题，生成目录，目录查看在右下角。
+
+## 增加不蒜子统计
+普通用户只需两步走：一行脚本+一行标签，搞定一切。追求极致的用户可以进行任意DIY。
+
+#####  一、安装脚本（必选）
+要使用不蒜子必须在页面中引入busuanzi.js，目前最新版如下。
+```
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+```
+不蒜子可以给任何类型的个人站点使用，如果你是用的hexo，打开themes/你的主题/layout/_partial/footer.ejs添加上述脚本即可，当然你也可以添加到 header 中。
+
+##### 二、安装标签（可选）
+只需要复制相应的html标签到你的网站要显示访问量的位置即可。您可以随意更改不蒜子标签为自己喜欢的显示效果，内容参考第三部分扩展开发。根据你要显示内容的不同，这分几种情况。
+
+- 1、显示站点总访问量
+要显示站点总访问量，复制以下代码添加到你需要显示的位置。有两种算法可选：
+
+算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。
+```
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+```
+算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。
+```
+<span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+```
+如果你是用的hexo，打开themes/你的主题/layout/_partial/footer.ejs添加即可。
+
+## 插入网易云音乐
+登入网易云音乐网页版，选择一首歌，点击歌曲详情，点击生成外链播放器,复制外链代码，插入你需要编辑的 MD 格式文章里面，即可.
+![](/assets/blogImg/201906261615.png)
 
 # 参考文献
 > [使用hexo，如果换了电脑怎么更新博客？](https://www.zhihu.com/question/21193762)
