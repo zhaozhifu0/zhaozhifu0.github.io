@@ -36,7 +36,7 @@
     ├── app.wxss
     └── project.config.json
 
-
+```
 ┌──────────────────────────┐
 │       博                 │
 │       客                 │ 
@@ -92,3 +92,4 @@
     │   ├── db.json
     │   ├── package.json
     └── └── package-lock.json
+```
