@@ -1,40 +1,6 @@
 # 博客备份
 
-    ├── config
-    │    └── config.js
-    ├── images
-    ├── pages
-    │    ├── books
-    │    │    ├── books.js
-    │    │    ├── books.json
-    │    │    ├── books.wxml
-    │    │    └── books.wxss
-    │    ├── comment
-    │    │    ├── comment.js
-    │    │    ├── comment.json
-    │    │    ├── comment.wxml
-    │    │    └── comment.wxss
-    │    ├── detail
-    │    │    ├── detail.js
-    │    │    ├── detail.json
-    │    │    ├── detail.wxml
-    │    │    └── detail.wxss
-    │    ├── my
-    │    │    ├── my.js
-    │    │    ├── my.json
-    │    │    ├── my.wxml
-    │    │    └── my.wxss
-    │    └── myBooks   
-    │         ├── myBooks.js
-    │         ├── myBooks.json
-    │         ├── myBooks.wxml
-    │         └── myBooks.wxss
-    ├── utils
-    │    └── util.js
-    ├── app.js
-    ├── app.json
-    ├── app.wxss
-    └── project.config.json
+
 
 ```
 ┌──────────────────────────┐
