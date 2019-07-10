@@ -5,7 +5,7 @@
 # Site
 title: 无聊才读书的博客
 subtitle: "一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。"
-description: 无聊才读书的博客  “记录个人所思所想！！！”
+description: 无聊才读书的博客  “记录个人所思所想！！！”  努力成为一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。
 keywords: "无聊才读书的博客"
 author: 无聊才读书
 language:
@@ -74,7 +74,14 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: yilia
-
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

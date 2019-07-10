@@ -83,7 +83,27 @@ $ hexo s # 启动本地web服务器
 ```
 $ npm install hexo-generator-feed --save
 ```
-2.建立站点地图需要安装
+1.1 在博客工程文件根目录下_config.yml文件中添加如下内容
+```
+# Extensions
+plugins:
+    hexo-generator-feed
+#Feed Atom
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
+```
+1.2 打开主题配置文件_config.yml,搜索rss，添加配置
+```
+$ rss: /atom.xml
+```
+```
+$ hexo g
+$ hexo s
+```
+1.3 之后浏览器预览就可以了。
+ 2. 建立站点地图需要安装
 ```
 $ npm install hexo-generator-sitemap --save
 ```
