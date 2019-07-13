@@ -203,6 +203,72 @@ tags:
 登入网易云音乐网页版，选择一首歌，点击歌曲详情，点击生成外链播放器,复制外链代码，插入你需要编辑的 MD 格式文章里面，即可.
 ![](/assets/blogImg/201906261615.png)
 
+## Gitment评论
+
+gitment其实就是利用你的代码仓库的Issues，来实现评论。每一篇文章对应该代码仓库中的一个Issues,Issues中的评论对应你的博客每篇文章中的评论。
+
+1. 注册 OAuth Application
+   首先要注册一个OAuth Application应用可以点击[这里](https://github.com/settings/applications/new)。 输入的内容如下：
+   Application name （随意就好，可以写你博客名称）
+   Homepage URL     （你的博客地址，例如https://zhaozhifu08.github.io/ 如果有域名可以填写域名https://zhaozf.site  ）
+   Application description (随意就好)
+   Authorization callback URL (也是博客地址，例如https://zhaozhifu08.github.io/ 如果有域名可以填写域名https://zhaozf.site)
+   输入完成之后，点击注册就OK了。成功之后就会拿到Client ID和Client Secret，然后先进行一下步，记住这两个后面步骤会用到。
+2. 修改_config.yml文件
+   在themes->yilia->_config.yml中修改如下：
+```
+#5、Gitment
+gitment_owner: zhaozhifu0     #你的 GitHub ID
+gitment_repo: 'zhaozhifu0.github.io'          #存储评论的 repo
+gitment_oauth:
+  client_id: '41be2b66b56556bc6c7c'           #client ID
+  client_secret: '3338513189c56c3740d424cd2268be4a4923d99a'       #client secret
+```
+3. 查看结果
+运行命令：hexo s到浏览器查看结果 https://localhost:4000
+
+4. 遇到的坑
+
+4.1 Error: Not Found
+- owner或repo配置错误
+- owner建议直接写github帐号
+- repo填写存放评论的仓库，填写仓库名称就可以了，不需要加https://github.com/xxx/
+
+4.2 Error: Comments Not Initialized
+- 在该页面的Gitment评论区登陆GitHub账号
+- 之前OAuth Application callback填写有误
+
+4.3  Error：validation failed
+
+- id太长
+- issue的标签label有长度限制是50个字符
+- 建议设置为发布博客的日期+时间：
+  修改themes\yilia\layout\_partial\post\gitment.ejs 文件
+
+```
+var gitment = new Gitment({
+  id: "<%=url%>",                   //修改为 id: "<%=page.date%>",
+  owner: '<%=theme.gitment_owner%>',
+  repo: '<%=theme.gitment_repo%>',
+  oauth: {
+    client_id: '<%=theme.gitment_oauth.client_id%>',
+    client_secret: '<%=theme.gitment_oauth.client_secret%>',
+  },
+})
+gitment.render('gitment-ctn')
+```
+
+5. Gitment 汉化
+- 修改themes\yilia\layout\_partial\post\gitment.ejs 文件
+```
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> 
+```
+将原来的修改为如下：
+```
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+```
 # 参考文献
 > [使用hexo，如果换了电脑怎么更新博客？](https://www.zhihu.com/question/21193762)
 > [Markdown——入门指南](https://www.jianshu.com/p/1e402922ee32/)
