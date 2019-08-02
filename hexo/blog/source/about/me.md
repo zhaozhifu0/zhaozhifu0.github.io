@@ -18,16 +18,15 @@ title: About me
  ## <img src="assets/info-circle-solid.svg" width="30px"> 个人信息 
 
  - 男，1994 年出生
- - 求职意向：前端工程师
- - 工作经验：1 年（校招可不填）
- - 期望薪资：0k（校招可不填）
+ - 职位：web前端开发工程师
+
 
 ## <img src="assets/graduation-cap-solid.svg" width="30px"> 教育经历
 
-- 硕士，XXXX大学，计算机科学与技术专业，2016.9~2019.7
-- 学士，XXXX大学，软件工程专业，2012.9~2016.7
-- 绩点：***，年级前 100%
-- 通过了 CET4/6 英语等级考试
+- 硕士，XXXX大学，计算机科学与技术专业，2016.9~2019.7 暂无
+- 学士，哈尔滨师范大学，计算机软件专业
+- 2008年， 获得感动中国组委会的特别大奖。
+- 2006年， 获得美国时代周刊“年度人物”。
 
 ## <img src="assets/briefcase-solid.svg" width="30px"> 工作经历
 
@@ -43,26 +42,14 @@ title: About me
 
   使用一两句话描述项目的主要功能，然后介绍自己在项目中的角色，解决了什么问题，使用什么方式解决，比别人的方法相比有什么优势（尽量用数据来说明）。
 
-- 2008年 获得感动中国组委会的特别大奖。
-- 2006年 获得美国时代周刊“年度人物”。
+
 
 ## <img src="assets/tools-solid.svg" width="30px"> 技能清单
 
-- ★★★ HTML5
-- ★★☆ CSS3
-- ★★★ JavaScript
-- ★★★ 微信小程序
-- ★★★ Vue & React
-- ★★☆ Node.js
-- ★★☆ Linux
-- ★☆☆ MySQL
-- ★☆☆ Java
-- ★☆☆ C、Python
-
 
 -  熟悉 JavaScript 核心基础；掌握 ES6 常用语法；
--  懂得使用 Vue.js 框架开发项目，~~ 了解 Vue.js 全家桶；~~
--  懂得使用 Bootstrap，~~ AntD 等前端 UI 框架，了解 Sass，Stylus 等 CSS 预处理器；~~
+-  懂得使用 Vue.js 框架开发项目， 了解 Vue.js 全家桶；
+-  懂得使用 Bootstrap， AntD 等前端 UI 框架，了解 Sass，Stylus 等 CSS 预处理器；
 -  懂得使用 Git，SVN 等工具的常用操作来进行团队合作开发；
 -  懂得使用 Webpack 对项目进行模块打包并了解过其原理；
 -  了解 Node,js，使用过 Koa2 和 MySQL 并开发过小型项目；
