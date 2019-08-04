@@ -6,7 +6,7 @@
 title: 无聊才读书的博客
 subtitle: "一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。"
 description: 无聊才读书的博客  “记录个人所思所想！！！”  努力成为一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。
-keywords: "无聊才读书的博客"
+keywords: "无聊才读书的博客,前端,微信小程序,JavaScript,es6,vue,webpack,git,node,js,taro,ui,ux"
 author: 无聊才读书
 language:
 timezone:
@@ -86,7 +86,9 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zhaozhifu0/zhaozhifu0.github.io.git
+  repo: 
+      github: git@github.com:zhaozhifu0/zhaozhifu0.github.io.git
+      coding: git@git.dev.tencent.com:zhaozhifu/zhaozhifu.git
   branch: master
 
 #站点地图

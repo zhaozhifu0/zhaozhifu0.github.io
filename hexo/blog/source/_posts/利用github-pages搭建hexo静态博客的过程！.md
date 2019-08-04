@@ -129,6 +129,30 @@ deploy:
 $ hexo deploy #或者hexo d(hexo deploy的简写) 再或者hexo d -g (生成部署)
 ```
 5. 最后访问https://yourname.github.io 就可以查看博客的内容了。还可以通过hexo new "postName" 命令创建新文章。
+6. 部署到coding上：
+
+(1)在coding上创建一个项目，进入项目里“代码”页面，点击“一键开启静态 Pages”，然后上传项目代码。
+(2)在上传之前打开 Hexo 博客主配置文件 _config.yml，找到 deploy 属性，作如下配置：
+```
+deploy:
+  type: git
+  repo: 
+      github: git@github.com:zhaozhifu0/zhaozhifu0.github.io.git
+      coding: git@git.dev.tencent.com:zhaozhifu/zhaozhifu.git
+  branch: master
+```
+(3)上传之后就可以通过<user_name>.coding.me 访问你的网站。
+(4)绑定自定义域名:
+> Coding Pages 支持绑定自定义域名，域名理论上不用备案，但是根据国家规定建议进行ICP备案。允许以下自定义域名格式：
+> 顶级域名 example.com
+> www 二级域名 www.example.com
+> 二级域名 blog.example.com
+
+(5)进入域名服务商提供的域名管理面板，选中欲绑定的域名，进入解析设置，点击"添加解析"。
+(6)添加 CNAME 记录，在项目设置中绑定域名下面有行小字 ： 绑定前请在域名 DNS 设置中添加一条 CNAME 记录指向 xxxx.coding.me。将@和www记录都解析到这个即可。
+(7)在"Pages 服务"设置页中绑定自定义域名，如果配置 DNS 解析时域名前缀为 ，绑定自定义域名需要填写 www 前缀。
+(8)如果绑定后访问域名看到404相关提示，说明是域名配置是存在问题的，请自行检查DNS配置是否正确。
+
 
 # 六、配置域名
 1. 购买域名
@@ -276,6 +300,7 @@ gitment.render('gitment-ctn')
 > [Hexo搭建GitHub博客—打造炫酷的NexT主题--高级(三)](https://eirunye.github.io/2018/09/02/Hexo%E6%90%AD%E5%BB%BAGitHub%E5%8D%9A%E5%AE%A2%E2%80%94%E6%89%93%E9%80%A0%E7%82%AB%E9%85%B7%E7%9A%84Next%E4%B8%BB%E9%A2%98%E2%80%94%E9%AB%98%E7%BA%A7%E2%80%94%E4%B8%89/#more)
 > [我是如何利用Github Pages搭建起我的博客，细数一路的坑](https://www.cnblogs.com/jackyroc/p/7681938.html)
 > [手把手教你使用Hexo + Github Pages搭建个人独立博客](https://segmentfault.com/a/1190000004947261)
+> [hexo的next主题个性化教程:打造炫酷网站](https://www.jianshu.com/p/f054333ac9e6)
 
 # 其他扩展
 [为什么我选择用 Github issues 来写博客](https://juejin.im/post/5ce53de85188252d46797fee)
