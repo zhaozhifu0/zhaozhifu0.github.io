@@ -1,6 +1,6 @@
 $(function(){
 	//添加17个img
-	addImg(18);
+	addImg(17);
 	var imgLen = $("img").length;
 	var index = Math.floor(imgLen/2);//放置在中间的图片的index
 	var imgLeft = [];

@@ -307,3 +307,4 @@ gitment.render('gitment-ctn')
 
 # 其他扩展
 [为什么我选择用 Github issues 来写博客](https://juejin.im/post/5ce53de85188252d46797fee)
+[修改Yilia左下角SubNav的社交图标](https://blog.zscself.com/posts/70677220/)

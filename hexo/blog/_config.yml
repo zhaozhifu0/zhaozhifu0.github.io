@@ -6,7 +6,7 @@
 title: 无聊才读书的博客
 subtitle: "一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。"
 description: 无聊才读书的博客  “记录个人所思所想！！！”  努力成为一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。
-keywords: "无聊才读书的博客,前端,微信小程序,JavaScript,es6,vue,webpack,git,node,js,taro,ui,ux"
+keywords: "无聊才读书的博客,无聊才读书,前端,微信小程序,翻译,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,js,ts,typescript,JavaScript,es6,vue,react,webpack,git,node.js,taro,ui,ux"
 author: 无聊才读书
 language:
 timezone:
@@ -41,8 +41,8 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace:
+  auto_detect: true
+  tab_replace: 
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
