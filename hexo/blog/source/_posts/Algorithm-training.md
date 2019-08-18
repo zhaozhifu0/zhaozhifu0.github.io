@@ -1,6 +1,7 @@
 ---
 title: Algorithm training
 date: 2019-06-02 22:27:46
+toc: true
 tags:
     - Algorithm
 ---
