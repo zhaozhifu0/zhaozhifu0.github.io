@@ -305,6 +305,7 @@ gitment.render('gitment-ctn')
 > [手把手教你使用Hexo + Github Pages搭建个人独立博客](https://segmentfault.com/a/1190000004947261)
 > [hexo的next主题个性化教程:打造炫酷网站](https://www.jianshu.com/p/f054333ac9e6)
 > [自己动手修改完善yilia主题](https://www.codercto.com/a/55846.html)
+> [自己动手修改完善yilia主题（下）](https://www.codercto.com/a/57534.html)
 
 # 其他扩展
 [为什么我选择用 Github issues 来写博客](https://juejin.im/post/5ce53de85188252d46797fee)
