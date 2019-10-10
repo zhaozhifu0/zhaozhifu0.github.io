@@ -2,7 +2,7 @@
 title: 【微信小程序采坑之路】①radio实现接收后台数据并展示
 date: 2019-08-04 19:46:31
 toc: true
-top: 1
+# top: 1
 tags:
     - Radio组件
 categories:
