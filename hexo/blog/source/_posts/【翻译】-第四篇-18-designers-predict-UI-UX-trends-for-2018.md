@@ -1,12 +1,13 @@
 ---
 title: 【翻译】(第四篇)18 designers predict UI/UX trends for 2018
-date: 2019-08-10 15:25:22
 toc: true
 tags:
-    - designers
-    - UI/UX
+  - designers
+  - UI/UX
 categories:
-    - 翻译
+  - 翻译
+abbrlink: ac8354aa
+date: 2019-08-10 15:25:22
 ---
 
 <center><h1> 18位设计师预测2018年用户界面/用户体验趋势</h1></center>

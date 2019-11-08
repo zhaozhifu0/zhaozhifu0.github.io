@@ -1,13 +1,14 @@
 ---
 title: 【翻译】(第一篇) 7 steps to become a UI/UX designer
-date: 2019-06-19 19:42:59
 toc: true
-tags: 
-    - 翻译
-    - 设计
-    - UI/UX
+tags:
+  - 翻译
+  - 设计
+  - UI/UX
 categories:
-    - 翻译
+  - 翻译
+abbrlink: 5a2c16d3
+date: 2019-06-19 19:42:59
 ---
 
 <center><h1>七步成为UI/UX设计师</h1></center>

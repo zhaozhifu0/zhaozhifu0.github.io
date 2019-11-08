@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 无聊才读书的博客
+title: 无聊才读书 | 无聊才读书的个人网站
 subtitle: "很想回到过去，也许都是因为现在不够好。"
 description: 无聊才读书的博客  “记录个人所思所想！！！”  努力成为一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师。关于我：生于黄龙府，苟活阿勒锦。<br><br>弱冠入前端，学浅而空迟。<br><br>吾今用博客，以书所思想。<br><br>日后若有暇，温故求知新。
-keywords: "赵志富,赵志富的博客,zhaozf,无聊才读书的博客,无聊才读书,前端,微信小程序,翻译,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,js,ts,typescript,JavaScript,es6,vue,react,webpack,git,node.js,taro,ui,ux"
+keywords: "赵志富,赵志富的博客,zhaozf,无聊才读书的博客,无聊才读书,无聊才读书的个人网站,前端,微信小程序,翻译,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,js,ts,typescript,JavaScript,es6,vue,react,webpack,git,node.js,taro,ui,ux"
 author: 无聊才读书
 language:
 timezone:
@@ -15,7 +15,11 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://zhaozf.site
 root: /
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: :abbrlink/
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults:
 
 # Directory

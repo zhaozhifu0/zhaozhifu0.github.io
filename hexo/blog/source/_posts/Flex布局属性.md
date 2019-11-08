@@ -1,11 +1,12 @@
 ---
 title: Flex布局属性
-date: 2019-07-11 09:34:30
 tags:
-    - 弹性布局
-    - Flexible Box
+  - 弹性布局
+  - Flexible Box
 categories:
-    - CSS
+  - CSS
+abbrlink: 4c5ee8a2
+date: 2019-07-11 09:34:30
 ---
 
 

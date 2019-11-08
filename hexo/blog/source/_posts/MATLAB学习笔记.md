@@ -1,10 +1,11 @@
 ---
 title: MATLAB学习笔记
-date: 2019-08-05 18:24:44
 tags:
-    - MATLAB
+  - MATLAB
 categories:
-    - 学习笔记
+  - 学习笔记
+abbrlink: 112d01e5
+date: 2019-08-05 18:24:44
 ---
 
 ![](/assets/blogImg/201908051827.png)

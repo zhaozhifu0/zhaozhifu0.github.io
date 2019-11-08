@@ -1,13 +1,14 @@
 ---
 title: 【翻译】(第三篇) The Psychology Principles Every UI/UX Designer Needs to Know
-date: 2019-07-16 22:42:49
 toc: true
 tags:
-    - UI/UX
-    - 设计
-    - 心理学
+  - UI/UX
+  - 设计
+  - 心理学
 categories:
-    - 翻译
+  - 翻译
+abbrlink: e0f7ecd4
+date: 2019-07-16 22:42:49
 ---
 
 <center><h1> 每一个UI/UX设计者需要知道的心理学原则</h1></center>

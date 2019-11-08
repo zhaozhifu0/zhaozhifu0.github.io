@@ -1,13 +1,14 @@
 ---
 title: 【翻译】(第二篇) How to streamline your UI/UX workflow with Figma
-date: 2019-07-12 09:22:59
 toc: true
-tags: 
-    - 翻译
-    - 设计
-    - 软件使用
+tags:
+  - 翻译
+  - 设计
+  - 软件使用
 categories:
-    - 翻译
+  - 翻译
+abbrlink: c7ae177f
+date: 2019-07-12 09:22:59
 ---
 
 

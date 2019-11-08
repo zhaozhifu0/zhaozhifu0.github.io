@@ -1,9 +1,10 @@
 ---
 title: Algorithm training
-date: 2019-06-02 22:27:46
 toc: true
 tags:
-    - Algorithm
+  - Algorithm
+abbrlink: 5fd3f732
+date: 2019-06-02 22:27:46
 ---
 
 # 第一周

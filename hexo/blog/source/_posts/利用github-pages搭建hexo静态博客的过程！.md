@@ -1,12 +1,13 @@
 ---
 title: 利用github pages搭建hexo静态博客过程！
-date: 2019-05-22 12:35:22
 toc: true
 tags:
-    - 博客
-    - Github Pages
+  - 博客
+  - Github Pages
 categories:
-    - Hexo
+  - Hexo
+abbrlink: 6944216c
+date: 2019-05-22 12:35:22
 ---
 
 ![](/assets/blogImg/linian.jpg)
@@ -226,6 +227,27 @@ tags:
 ## 插入网易云音乐
 登入网易云音乐网页版，选择一首歌，点击歌曲详情，点击生成外链播放器,复制外链代码，插入你需要编辑的 MD 格式文章里面，即可.
 ![](/assets/blogImg/201906261615.png)
+
+## Url链接优化
+我们可以发现hexo默认生成的文章地址路径是 【网站名称／年／月／日／文章名称】。
+
+这种链接对搜索爬虫是很不友好的，它的url结构超过了三层，太深了。
+
+下面我推荐安装hexo-abbrlink插件：
+```
+npm install hexo-abbrlink --save
+```
+- 实现思路：
+对标题+时间进行md5然后再转base64，保存在front-matter中。
+
+然后配置_config.yml
+```
+# permalink: :title/
+permalink: archives/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
+```
 
 ## Gitment评论
 
