@@ -318,6 +318,8 @@ gitment.render('gitment-ctn')
 
 [其他特效参考](http://ds666.fun/2019/01/25/%E6%90%AD%E5%8D%9A%E5%AE%A2%E5%85%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E7%BE%8E%E5%8C%96/)
 [点击出现文字效果](https://xhyeax.github.io/2018/11/30/click-word/)
+[下雪特效](https://blog.csdn.net/stormdony/article/details/86001618)
+
 # 参考文献
 > [使用hexo，如果换了电脑怎么更新博客？](https://www.zhihu.com/question/21193762)
 > [Markdown——入门指南](https://www.jianshu.com/p/1e402922ee32/)
