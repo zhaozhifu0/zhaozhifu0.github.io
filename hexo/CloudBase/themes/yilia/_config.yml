@@ -1,0 +1,155 @@
+# Header
+
+menu:
+  主页: /
+  #随笔: /tags/随笔/
+  #照片: /demo/photowall/index.html
+  实例: /demo/index.html
+  #文档: /gitbook/index.html
+  简历: /about/me.html
+
+# SubNav
+subnav:
+  github: "https://github.com/zhaozhifu0"
+  #weibo: "#"
+  
+  #zhihu: "#"
+  #qq: "#"
+  weixin: "https://mp.weixin.qq.com/s/gZCa_Ny9kU0agm_6QjFMfw"
+  jianshu: "https://www.jianshu.com/u/da6ef386752a"
+  #douban: "#"
+  #segmentfault: "#"
+  #bilibili: "#"
+  #acfun: "#"
+  #mail: "mailto:zouxin9@foxmail.com"
+  rss: "/atom.xml"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# 是否需要修改 root 路径
+# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
+# 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
+root: /
+
+# Content
+
+# 文章太长，截断按钮文字
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+#
+#fancybox: true
+# 数学公式
+mathjax: true
+# 是否在新窗口打开链接
+open_in_new: true
+
+# 打赏
+# 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+reward_type: 2
+# 打赏wording
+reward_wording: '谢谢你请我吃糖果'
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+alipay: /assets/reward/zhifubao.png
+# 微信二维码图片地址
+weixin: /assets/reward/shoukuanma.jpg
+
+# 目录
+# 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
+toc: 1
+# 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
+toc_hide_index: true
+# 目录为空时的提示
+toc_empty_wording: '目录，不存在的…'
+
+# 是否有快速回到顶部的按钮
+top: true
+
+# Miscellaneous
+baidu_analytics: 'a17512f97d964ae31927dad92a3269ba'
+google_analytics: ''
+favicon: /favicon.png
+
+#你的头像url
+avatar: https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132
+
+#是否开启分享
+share_jia: true
+
+#评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus；5、Gitment
+#不需要使用某项，直接设置值为false，或注释掉
+#具体请参考wiki：https://github.com/litten/hexo-theme-yilia/wiki/
+
+#1、多说
+duoshuo: false
+
+#2、网易云跟帖
+wangyiyun: false
+
+#3、畅言
+# changyan_appid: cyuiRvk4F
+# changyan_conf: 8ffeed217d715ad2de8e8920e83b08f3
+
+#4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
+disqus: false
+
+#5、Gitment
+#gitment_owner: zhaozhifu0     #你的 GitHub ID
+#gitment_repo: 'zhaozhifu0.github.io'          #存储评论的 repo
+#gitment_oauth:
+#  client_id: '41be2b66b56556bc6c7c'           #client ID
+#  client_secret: '3338513189c56c3740d424cd2268be4a4923d99a'       #client secret
+
+# 样式定制 - 一般不需要修改，除非有很强的定制欲望…
+style:
+  # 头像上面的背景颜色
+  header: '#4d4d4d'
+  # 右滑板块背景
+  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: false
+
+# 智能菜单
+# 如不需要，将该对应项置为false
+# 比如
+#smart_menu:
+#  friends: false
+smart_menu:
+  innerArchive: '所有文章'
+  friends: '友链'
+  aboutme: '关于我'
+
+friends:
+  赵志富: https://blog.zhaozf.site/
+  馬宁: https://www.tierama.com/
+  黎小腾: http://litten.me/
+  XiaoXiaoTao: http://xxty.fun/
+  酷壳: https://www.coolshell.cn/
+  中华诗词: https://www.shi-ci.com/
+  #友情链接2: http://localhost:4000/
+  #友情链接3: http://localhost:4000/
+  #友情链接4: http://localhost:4000/
+  #友情链接5: http://localhost:4000/
+  #友情链接6: http://localhost:4000/
+
+aboutme: 生于黄龙府，苟活阿勒锦。<br><br>弱冠入前端，学浅而空迟。<br><br>吾今用博客，以书所思想。<br><br>日后若有暇，温故求知新。
+#aboutme: /about/me.html
+
+#头像变换
+txbh: true
+
+## 版权声明
+#0-关闭声明；
+#1-文章对应的md文件里有declare: true属性，才有版权声明；
+#2-所有文章均有版权声明
+declare_type: 2
+licensee_url: https://creativecommons.org/licenses/by-nc-sa/4.0/          # 当前应用的版权协议地址。
+licensee_name: '知识共享署名-4.0国际许可协议'  # 版权协议的名称
+#licensee_img: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png      # 版权协议的Logo

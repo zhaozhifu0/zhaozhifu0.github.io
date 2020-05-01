@@ -316,6 +316,33 @@ gitment.render('gitment-ctn')
 <script src="https://billts.site/js/gitment.js"></script>
 ```
 
+## 实现私密文件加密
+
+- 安装插件命令`npm install --save hexo-blog-encrypt`或 `yarn add hexo-blog-encrypt`(需要) [Yarn](https://classic.yarnpkg.com/en/)，然后编辑`_config.yml`文件，添加如下内容：
+```
+# Security
+## 文章加密 hexo-blog-encrypt
+encrypt:
+    enable: true
+```
+
+- 然后在想加密的文章头部添加上对应字段，如下：
+```
+---
+title: hello world
+date: 2016-03-30 21:18:02   
+tags:       
+password: 12345   （密码）
+abstract: 查看文章，请输入文章密码。 
+message: 这是一篇加密文章，内容可能是个人情感宣泄或者收费技术。如果你确实想看，请微信搜索公众号名称【无聊才读书呀】 或微信号：【zhaozfsite】回复关键字【博客密码】，获取文章密码。  
+---
+```
+- password: 是该博客加密使用的密码
+- abstract: 是该博客的摘要，会显示在博客的列表页
+- message: 这个是博客查看时，密码输入框上面的描述性文字
+
+详细的内容和配置请参考github[hexo-blog-encrypt](https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md)
+
 [其他特效参考](http://ds666.fun/2019/01/25/%E6%90%AD%E5%8D%9A%E5%AE%A2%E5%85%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E7%BE%8E%E5%8C%96/)
 [点击出现文字效果](https://xhyeax.github.io/2018/11/30/click-word/)
 [下雪特效](https://blog.csdn.net/stormdony/article/details/86001618)

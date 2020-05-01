@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>3D相册</title>
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="icon" href="favicon.png">
+</head>
+
+<body>
+	<!-- <embed src="./music/美丽之物.mp3" hidden="true" loop="true" /> -->
+	<audio src="./music/535d_0708_5552_d7bb7511fc0b09649ce5b83a09e5e1b0.m4a" autoplay preload loop="loop"></audio>
+	<!--/*外层最大容器*/-->
+	<div class="wrap">
+		<!--	/*包裹所有元素的容器*/-->
+		<div class="cube">
+			<!--前面图片 -->
+			<div class="out_front">
+				<img src="img/1.jpg" class="pic" />
+			</div>
+			<!--后面图片 -->
+			<div class="out_back">
+				<img src="img/2.jpg" class="pic" />
+			</div>
+			<!--左图片 -->
+			<div class="out_left">
+				<img src="img/3.jpg" class="pic" />
+			</div>
+			<div class="out_right">
+				<img src="img/4.jpg" class="pic" />
+			</div>
+			<div class="out_top">
+				<img src="img/5.jpg" class="pic" />
+			</div>
+			<div class="out_bottom">
+				<img src="img/6.jpg" class="pic" />
+			</div>
+			<!--小正方体 -->
+			<span class="in_front">
+				<img src="img/7.jpg" class="in_pic" />
+			</span>
+			<span class="in_back">
+				<img src="img/8.jpg" class="in_pic" />
+			</span>
+			<span class="in_left">
+				<img src="img/9.jpg" class="in_pic" />
+			</span>
+			<span class="in_right">
+				<img src="img/10.jpg" class="in_pic" />
+			</span>
+			<span class="in_top">
+				<img src="img/11.jpg" class="in_pic" />
+			</span>
+			<span class="in_bottom">
+				<img src="img/12.jpg" class="in_pic" />
+			</span>
+		</div>
+	</div>
+	<!-- <div id="text"></div>
+	
+	<script>
+		var i = 0;
+		var str = "祝“桌桌”：家人平安，岁月静好，快乐无忧；眼里是阳光，笑里是坦荡。";
+
+		window.onload = function typing() {
+			//获取div
+			var mydiv = document.getElementById("text");
+			mydiv.innerHTML += str.charAt(i);
+			i++;
+			var id = setTimeout(typing, 100);
+			if (i == str.length) {
+				clearTimeout(id);
+			}
+		}
+	</script> -->
+</body>
+
+</html>
