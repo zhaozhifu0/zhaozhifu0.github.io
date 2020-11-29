@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blogs.zhaozf.site/"/>
-  <updated>2020-11-28T15:52:02.880Z</updated>
+  <updated>2020-11-29T14:39:23.035Z</updated>
   <id>https://blogs.zhaozf.site/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker 搭建 Jenkins</title>
+    <link href="https://blogs.zhaozf.site/770a69f8/"/>
+    <id>https://blogs.zhaozf.site/770a69f8/</id>
+    <published>2020-11-29T13:39:49.000Z</published>
+    <updated>2020-11-29T14:39:23.035Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://camo.githubusercontent.com/a5004ae5bffb9a59384514fd88d3f18c47e1e0373bfda94a18b422e4a164d399/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67" alt></p><h2 id="1-安装-Docker"><a href="#1-安装-Docker" class="headerlink" title="1.安装 Docker"></a>1.安装 Docker</h2><h3 id="Docker-简介"><a href="#Docker-简介" class="headerlink" title="Docker 简介"></a>Docker 简介</h3><p><a href="https://www.docker.com/community-edition" target="_blank" rel="noopener">Docker CE</a> 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”<a href="https://www.docker.com/community-edition" target="_blank" rel="noopener">LXC容器](Docker CE</a> 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。</p><blockquote><p>Linux 容器：Linux Containers</p></blockquote><a id="more"></a><h3 id="安装-curl-工具"><a href="#安装-curl-工具" class="headerlink" title="安装 curl 工具"></a>安装 curl 工具</h3><p>使用 [APT] 包管理工具安装 [cURL]：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt <span class="keyword">update</span> &amp;&amp; apt <span class="keyword">install</span> -y curl</span><br></pre></td></tr></table></figure><blockquote><p>APT: Debian Linux 的默认包管理工具</p></blockquote><blockquote><p>cURL: 最常用的命令行文件传输工具</p></blockquote><h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h3><p>官方已经给出了适合 Linux 平台的自动安装脚本。因此想要安装 Docker，只需要运行下面的命令：</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure><p>[?] 在上面的命令中，我们添加了[参数] <code>--mirror</code> 以使用[国内的安装包镜像]。</p><blockquote><p>–mirror Aliyun</p></blockquote><blockquote><p>官方脚本支持的镜像参数有: Aliyun、AzureChinaCloud</p></blockquote><blockquote><p>curl -fsSL <a href="https://get.docker.com/" target="_blank" rel="noopener">https://get.docker.com</a> | bash -s docker –mirror Aliyun</p></blockquote><h2 id="2-添加-Docker-Hub-镜像加速"><a href="#2-添加-Docker-Hub-镜像加速" class="headerlink" title="2.添加 Docker Hub 镜像加速"></a>2.添加 Docker Hub 镜像加速</h2><p>您可以通过修改 daemon.json 配置文件来使用 Docker Hub 加速服务。</p><h3 id="创建-daemon-json-文件"><a href="#创建-daemon-json-文件" class="headerlink" title="创建 daemon.json 文件"></a>创建 daemon.json 文件</h3><p>请在 <code>/etc/docker</code> 目录下创建 <em>daemon.json</em>。</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch <span class="regexp">/etc/</span>docker<span class="regexp">/daemon.json</span></span><br></pre></td></tr></table></figure><h3 id="编辑-daemon-json-文件"><a href="#编辑-daemon-json-文件" class="headerlink" title="编辑 daemon.json 文件"></a>编辑 daemon.json 文件</h3><p><em>编辑 /etc/docker/daemon.json</em>，添加镜像服务地址。腾讯云镜像的配置如下：</p><h5 id="示例代码：-etc-docker-daemon-json"><a href="#示例代码：-etc-docker-daemon-json" class="headerlink" title="示例代码：/etc/docker/daemon.json"></a>示例代码：/etc/docker/daemon.json</h5><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"registry-mirrors"</span>: [<span class="string">"https://mirror.ccs.tencentyun.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="重新启动-Docker"><a href="#重新启动-Docker" class="headerlink" title="重新启动 Docker"></a>重新启动 Docker</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">systemctl daemon-reload</span></span><br><span class="line"><span class="attribute">systemctl restart docker</span></span><br></pre></td></tr></table></figure><h2 id="3-安装-Jenkins"><a href="#3-安装-Jenkins" class="headerlink" title="3.安装 Jenkins"></a>3.安装 Jenkins</h2><h3 id="Jenkins-简介"><a href="#Jenkins-简介" class="headerlink" title="Jenkins 简介"></a>Jenkins 简介</h3><p><a href="https://jenkins.io/" target="_blank" rel="noopener">Jenkins</a> 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p><h3 id="获取-Jenkins-镜像"><a href="#获取-Jenkins-镜像" class="headerlink" title="获取 Jenkins 镜像"></a>获取 Jenkins 镜像</h3><p>Jenkins 官方镜像主要提供两个版本，分别是 [LTS] 版和[每周更新]版。本教程使用的是 LTS 版。</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull jenkins/<span class="string">jenkins:</span>lts</span><br></pre></td></tr></table></figure><blockquote><p>Jenkins 发布的长期支持版：Long-term support</p></blockquote><blockquote><p>Jenkins 每周发布一期软件更新的版本：weekly</p></blockquote><h3 id="启动-Jenkins-容器"><a href="#启动-Jenkins-容器" class="headerlink" title="启动 Jenkins 容器"></a>启动 Jenkins 容器</h3><p>使用 Docker 在宿主主机启动 Jenkins 容器：</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name jenkins -<span class="selector-tag">p</span> <span class="number">8080</span>:<span class="number">8080</span> -<span class="selector-tag">p</span> <span class="number">50000</span>:<span class="number">50000</span> -v jenkins_home:/var/jenkins_home --restart always -d jenkins/jenkins:lts</span><br></pre></td></tr></table></figure><h4 id="docker-run-附加参数说明："><a href="#docker-run-附加参数说明：" class="headerlink" title="docker run 附加参数说明："></a>docker run 附加参数说明：</h4><table><thead><tr><th>附加参数</th><th>本教程所使用的值</th><th>用途</th></tr></thead><tbody><tr><td>–name</td><td>jenkins</td><td>[命名]</td></tr><tr><td>-p</td><td>8080:8080</td><td>[端口映射]</td></tr><tr><td>-v</td><td>jenkins_home</td><td>[数据卷]</td></tr><tr><td>–restart</td><td>always</td><td>[重启策略]</td></tr></tbody></table><p>有关更多配置方法请查看<a href="https://github.com/jenkinsci/docker/blob/master/README.md" target="_blank" rel="noopener">官方 Docker 文档</a>。</p><blockquote><p>容器的名称: –name jenkins</p></blockquote><blockquote><p>容器到宿主主机的端口映射: -p 8080:8080 -p 50000:50000</p></blockquote><blockquote><p>数据卷挂载: -v jenkins_home:/var/jenkins_home</p></blockquote><blockquote><p>退出时总是重启容器: –restart always</p></blockquote><h3 id="访问-Jenkins-实例"><a href="#访问-Jenkins-实例" class="headerlink" title="访问 Jenkins 实例"></a>访问 Jenkins 实例</h3><p>在浏览器中打开 [http://&lt;您的  IP 地址&gt;:8080]即可浏览之前启动的 Jenkins 实例。</p><h3 id="获取初始登录密码"><a href="#获取初始登录密码" class="headerlink" title="获取初始登录密码"></a>获取初始登录密码</h3><p>回到命令行，执行以下命令：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker exec jenkins \</span><br><span class="line">cat <span class="regexp">/var/</span>jenkins_home<span class="regexp">/secrets/i</span>nitialAdminPassword</span><br></pre></td></tr></table></figure><p>从输出结果中获得的一串 Jenkins 初始密码，复制密码，回到 [http://&lt;您的 IP 地址&gt;:8080] 填入密码。</p><h3 id="定制-Jenkins"><a href="#定制-Jenkins" class="headerlink" title="定制 Jenkins"></a>定制 Jenkins</h3><p>我们选择默认的 <strong>Install suggested plugins</strong> 来安装插件。</p><p><img src="/assets/blogImg/customize-jenkins.png" alt></p><h3 id="创建帐户"><a href="#创建帐户" class="headerlink" title="创建帐户"></a>创建帐户</h3><p>请根据引导页面的信息创建第一个管理员用户，之后即可开启 Jenkins 的世界。</p><p><img src="/assets/blogImg/create-first-admin-user.png" alt></p><h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>恭喜，您已完成 Docker 搭建 Jenkins </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/a5004ae5bffb9a59384514fd88d3f18c47e1e0373bfda94a18b422e4a164d399/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67&quot; alt&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-安装-Docker&quot;&gt;&lt;a href=&quot;#1-安装-Docker&quot; class=&quot;headerlink&quot; title=&quot;1.安装 Docker&quot;&gt;&lt;/a&gt;1.安装 Docker&lt;/h2&gt;&lt;h3 id=&quot;Docker-简介&quot;&gt;&lt;a href=&quot;#Docker-简介&quot; class=&quot;headerlink&quot; title=&quot;Docker 简介&quot;&gt;&lt;/a&gt;Docker 简介&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.docker.com/community-edition&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Docker CE&lt;/a&gt; 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”&lt;a href=&quot;https://www.docker.com/community-edition&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LXC容器](Docker CE&lt;/a&gt; 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Linux 容器：Linux Containers&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>【下载】莫言《晚熟的人》</title>
@@ -103,9 +125,9 @@
       <category term="CentOS" scheme="https://blogs.zhaozf.site/categories/CentOS/"/>
     
     
-      <category term="ShowDoc" scheme="https://blogs.zhaozf.site/tags/ShowDoc/"/>
-    
       <category term="CentOS" scheme="https://blogs.zhaozf.site/tags/CentOS/"/>
+    
+      <category term="ShowDoc" scheme="https://blogs.zhaozf.site/tags/ShowDoc/"/>
     
   </entry>
   
@@ -159,9 +181,9 @@
       <category term="CentOS" scheme="https://blogs.zhaozf.site/categories/CentOS/"/>
     
     
-      <category term="CentOS" scheme="https://blogs.zhaozf.site/tags/CentOS/"/>
-    
       <category term="个人网盘" scheme="https://blogs.zhaozf.site/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/"/>
+    
+      <category term="CentOS" scheme="https://blogs.zhaozf.site/tags/CentOS/"/>
     
   </entry>
   
@@ -514,32 +536,6 @@
       <category term="uni-app" scheme="https://blogs.zhaozf.site/tags/uni-app/"/>
     
       <category term="微信小程序" scheme="https://blogs.zhaozf.site/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>身份证最后一位校验算法(ISO 7064:1983.MOD 11-2)</title>
-    <link href="https://blogs.zhaozf.site/1bca26fc/"/>
-    <id>https://blogs.zhaozf.site/1bca26fc/</id>
-    <published>2019-12-18T03:35:20.000Z</published>
-    <updated>2019-12-20T04:06:12.608Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/assets/blogImg/201912181143.jpg" alt></p><p>在生活中，有一些游戏账号的实名认证和申请<br>或者某些网站的注册会用到身份证号。</p><p>当输入错误的身份证号时会提示出错<br>给人的感觉是他们真的能识别身份证信息一样。<br>当然，除了一些政府、银行、证券、保险等行业接入的是NCIIC（全国公民身份证号码查询服务中心）<br>其他的大多数都是根据最后一位校验位来判断该身份证号码是否有效。</p><a id="more"></a><p>目前国内最权威的渠道肯定是全国公民身份证号码查询服务中心，简称NCIIC，<br>也就是很多实名认证服务商所声称采用的公安部接口。<br>实际上由于公安网跟外网是隔绝的，所以公安部的接口绝对是不会直接对外的提供的。<br>NCIIC是隶属于公安部的一个事业单位，可以直连国家人口基础信息库，<br>其数据权威性主要表现在：数据更新准确，公民的出生、死亡、 姓名变更等信息都会第一时间更新，<br>可以满足政府、金融等机构的对数据质量的高要求。<br>所以NCIIC的授权范围，也主要集中在政府、银行、证券、保险等行业。</p><h4 id="结构和形式"><a href="#结构和形式" class="headerlink" title="结构和形式"></a>结构和形式</h4><p>1．号码的结构<br>　　公民身份号码是特征组合码，由十七位数字本体码和一位校验码组成。排列顺序从左至右依次为：六位数字地址码，八位数字出生日期码，三位数字顺序码和一位数字校验码。<br>2．地址码<br>　　表示编码对象常住户口所在县（县级市、旗、区）的行政区划代码，按GB/T2260的规定执行。<br>3．出生日期码<br>　　表示编码对象出生的年、月、日，按GB/T7408的规定执行，年、月、日代码之间不用分隔符。<br>4．顺序码<br>　　表示在同一地址码所标识的区域范围内，对同年、同月、同日出生的人编定的顺序号，顺序码的奇数分配给男性，偶数分配给女性。<br>5．校验码<br>　　根据前面十七位数字码，按照ISO 7064:1983.MOD 11-2校验码计算出来的检验码。</p><p>地址码：<br>华北地区：北京市|110000，天津市|120000，河北省|130000，山西省|140000，内蒙古自治区|150000<br>东北地区： 辽宁省|210000，吉林省|220000，黑龙江省|230000<br>华东地区： 上海市|310000，江苏省|320000，浙江省|330000，安徽省|340000，福建省|350000，江西省|360000，山东省|370000<br>华中地区： 河南省|410000，湖北省|420000，湖南省|430000<br>华南地区：广东省|440000，广西壮族自治区|450000，海南省|460000<br>西南地区：重庆市|500000，四川省|510000，贵州省|520000，云南省|530000，西藏自治区|540000<br>西北地区： 陕西省|610000，甘肃省|620000，青海省|630000，宁夏回族自治区|640000，新疆维吾尔自治区|650000<br>特别地区：台湾地区(886)|830000，香港特别行政区（852)|810000，澳门特别行政区（853)|820000</p><p>中国大陆居民身份证号码中的地址码的数字编码规则为：<br>第一、二位表示省（自治区、直辖市、特别行政区）。<br>第一位数字是以前的大区制代码。第二位是大区所在省市编码。全国共分为6个大区：华北局（1）、东北局（2）、华东局（3）、中南局（4）、西南局（5）和西北局（6）<br>第三、四位表示市（地级市、自治州、盟及国家直辖市所属市辖区和县的汇总码）。其中，01-20，51-70表示省直辖市；21-50表示地区（自治州、盟）。<br>第五、六位表示县（市辖区、县级市、旗）。01-18表示市辖区或地区（自治州、盟）辖县级市；21-80表示县（旗）；81-99表示省直辖县级市。</p><p>其中第十七位奇数分给男性，偶数分给女性。<br>作为尾号的校验码，是由号码编制单位按统一的公式计算出来的，如果某人的尾号是0-9，都不会出现X，但如果尾号是10，那么就得用X来代替</p><h4 id="ISO-7064-1983-MOD-11-2计算方法"><a href="#ISO-7064-1983-MOD-11-2计算方法" class="headerlink" title="ISO 7064:1983.MOD 11-2计算方法"></a>ISO 7064:1983.MOD 11-2计算方法</h4><p>1、将前面的身份证号码17位数分别乘以不同的系数。从第一位到第十七位的系数分别为：7－9－10－5－8－4－2－1－6－3－7－9－10－5－8－4－2。<br>2、将这17位数字和系数相乘的结果相加。<br>3、用加出来和除以11，看余数是多少？<br>4、余数只可能有0－1－2－3－4－5－6－7－8－9－10这11个数字。其分别对应的最后一位身份证的号码为1－0－X －9－8－7－6－5－4－3－2。(即余数0对应1，余数1对应0，余数2对应X…)<br>5、通过上面得知如果余数是3，就会在身份证的第18位数字上出现的是9。如果对应的数字是2，身份证的最后一位号码就是罗马数字X。<br>例如：某男性的身份证号码为【53010219200508011X】， 我们看看这个身份证是不是符合计算规则的身份证。<br>首先我们得出前17位的乘积和【<code>(5*7)+(3*9)+(0*10)+(1*5)+(0*8)+(2*4)+(1*2)+(9*1)+(2*6)+(0*3)+(0*7)+(5*9)+(0*10)+(8*5)+(0*8)+(1*4)+(1*2)</code>】是189，然后用189除以11得出的结果是189÷11=17余下2，187÷11=17，还剩下2不能被除尽，也就是说其余数是2。最后通过对应规则就可以知道余数2对应的检验码是X。所以，可以判定这是一个正确的身份证号码。</p><p>JavaScript代码如下：</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//验证方法</span><br><span class="line">function verifyCode(id)&#123;</span><br><span class="line"> <span class="keyword">if</span>(id.<span class="built_in">length</span> !=<span class="number">18</span> )</span><br><span class="line">  <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line"> <span class="comment">/*1、从第一位到第十七位的系数分别为：</span></span><br><span class="line"><span class="comment">   7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2</span></span><br><span class="line"><span class="comment">   将这17位数字和系数相乘的结果相加。 */</span></span><br><span class="line"> <span class="built_in">var</span> arr = [<span class="number">7</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">4</span>,<span class="number">2</span>];</span><br><span class="line"> <span class="built_in">var</span> <span class="built_in">sum</span> = <span class="number">0</span>;</span><br><span class="line"> <span class="keyword">for</span>(<span class="built_in">var</span> i=<span class="number">0</span>; i&lt;arr.<span class="built_in">length</span>; i++)&#123;</span><br><span class="line">  <span class="built_in">sum</span> += parseInt(id.charAt(i)) * arr[i];</span><br><span class="line"> &#125;</span><br><span class="line"> //<span class="number">2</span>、用加出来和除以<span class="number">11</span>，看余数，</span><br><span class="line"> <span class="built_in">var</span> c = sum%<span class="number">11</span>;</span><br><span class="line"> //<span class="number">3</span>、分别对应的最后一位身份证的号码为：<span class="number">1</span>－<span class="number">0</span>－X－<span class="number">9</span>－<span class="number">8</span>－<span class="number">7</span>－<span class="number">6</span>－<span class="number">5</span>－<span class="number">4</span>－<span class="number">3</span>－<span class="number">2</span></span><br><span class="line"> <span class="built_in">var</span> ch = [‘<span class="number">1</span>‘, ‘<span class="number">0</span>‘, ‘X‘, ‘<span class="number">9</span>‘, ‘<span class="number">8</span>‘, ‘<span class="number">7</span>‘, ‘<span class="number">6</span>‘, ‘<span class="number">5</span>‘, ‘<span class="number">4</span>‘, ‘<span class="number">3</span>‘, ‘<span class="number">2</span>‘];</span><br><span class="line"> <span class="built_in">var</span> code = ch[c];</span><br><span class="line"> <span class="built_in">var</span> <span class="built_in">last</span> = id.charAt(<span class="number">17</span>);</span><br><span class="line"> <span class="built_in">last</span> = <span class="built_in">last</span>==‘x‘ ? ‘X‘: <span class="built_in">last</span>;</span><br><span class="line"> <span class="built_in">return</span> <span class="built_in">last</span> == code;</span><br><span class="line"> &#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure><p>var id = “34052419800101001X”;<br> console.log(verifyCode(id));<br><code>`</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/201912181143.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;在生活中，有一些游戏账号的实名认证和申请&lt;br&gt;或者某些网站的注册会用到身份证号。&lt;/p&gt;
-&lt;p&gt;当输入错误的身份证号时会提示出错&lt;br&gt;给人的感觉是他们真的能识别身份证信息一样。&lt;br&gt;当然，除了一些政府、银行、证券、保险等行业接入的是NCIIC（全国公民身份证号码查询服务中心）&lt;br&gt;其他的大多数都是根据最后一位校验位来判断该身份证号码是否有效。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="算法" scheme="https://blogs.zhaozf.site/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="https://blogs.zhaozf.site/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="身份证校验" scheme="https://blogs.zhaozf.site/tags/%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/"/>
     
   </entry>
   
