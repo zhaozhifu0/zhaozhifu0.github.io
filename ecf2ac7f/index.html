@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blogs.zhaozf.site">
   <title>搭建邮件服务 | 无聊才读书 | 无聊才读书的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要 Postfix 是一个标准的 MTA「Mail Transfer Agent」服务器，它负责通过 SMTP 协议管理发送到本机的邮件以及由本机发向外界的邮件；Dovecot 是一个优秀的 IMAP/POP 服务器用以接收外界发送到本机的邮件。本实验带您一步步搭建 Postfix、Dovecot 邮件服务。  环境 CentOS 7.2 64 位">
-<meta name="keywords" content="CentOS,邮件服务">
+  <meta name="description" content="摘要 Postfix 是一个标准的 MTA「Mail Transfer Agent」服务器，它负责通过 SMTP 协议管理发送到本机的邮件以及由本机发向外界的邮件；Dovecot 是一个优秀的 IMAP&#x2F;POP 服务器用以接收外界发送到本机的邮件。本实验带您一步步搭建 Postfix、Dovecot 邮件服务。  环境 CentOS 7.2 64 位">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建邮件服务">
 <meta property="og:url" content="https://blogs.zhaozf.site/ecf2ac7f/index.html">
 <meta property="og:site_name" content="无聊才读书 | 无聊才读书的个人网站">
-<meta property="og:description" content="摘要 Postfix 是一个标准的 MTA「Mail Transfer Agent」服务器，它负责通过 SMTP 协议管理发送到本机的邮件以及由本机发向外界的邮件；Dovecot 是一个优秀的 IMAP/POP 服务器用以接收外界发送到本机的邮件。本实验带您一步步搭建 Postfix、Dovecot 邮件服务。  环境 CentOS 7.2 64 位">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="摘要 Postfix 是一个标准的 MTA「Mail Transfer Agent」服务器，它负责通过 SMTP 协议管理发送到本机的邮件以及由本机发向外界的邮件；Dovecot 是一个优秀的 IMAP&#x2F;POP 服务器用以接收外界发送到本机的邮件。本实验带您一步步搭建 Postfix、Dovecot 邮件服务。  环境 CentOS 7.2 64 位">
+<meta property="og:locale">
 <meta property="og:image" content="https://blogs.zhaozf.site/assets/blogImg/202006151712.jpg">
-<meta property="og:updated_time" content="2020-06-15T13:01:05.617Z">
+<meta property="article:published_time" content="2020-06-15T07:50:49.000Z">
+<meta property="article:modified_time" content="2020-06-15T13:01:05.617Z">
+<meta property="article:author" content="无聊才读书">
+<meta property="article:tag" content="CentOS">
+<meta property="article:tag" content="邮件服务">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建邮件服务">
-<meta name="twitter:description" content="摘要 Postfix 是一个标准的 MTA「Mail Transfer Agent」服务器，它负责通过 SMTP 协议管理发送到本机的邮件以及由本机发向外界的邮件；Dovecot 是一个优秀的 IMAP/POP 服务器用以接收外界发送到本机的邮件。本实验带您一步步搭建 Postfix、Dovecot 邮件服务。  环境 CentOS 7.2 64 位">
 <meta name="twitter:image" content="https://blogs.zhaozf.site/assets/blogImg/202006151712.jpg">
   
     <link rel="alternative" href="/atom.xml" title="无聊才读书 | 无聊才读书的个人网站" type="application/atom+xml">
@@ -62,8 +63,8 @@ var _hmt = _hmt || [];
 	})();
 	</script> -->
 	
-</head>
-</html>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -76,10 +77,8 @@ var _hmt = _hmt || [];
 			<img src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">无聊才读书</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">道虽迩，不行不至；事虽小，不为不成。</p>
 		
 
 		<nav class="header-menu">
@@ -124,14 +123,14 @@ var _hmt = _hmt || [];
 		<nav style="margin: 60px;">
 			
 				<div >
-					<a href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
+					<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
 				</div>
 			
 		</nav>
 		
 		<!-- <nav class="header-menu">
 			<div class="social">
-				<a href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
+				<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
 			</div>
 		</nav> -->
 		
@@ -152,10 +151,8 @@ var _hmt = _hmt || [];
 				<img src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">无聊才读书</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>道虽迩，不行不至；事虽小，不为不成。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -225,12 +222,13 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/202006151712.jpg" alt></p>
+        <p><img src="/assets/blogImg/202006151712.jpg"></p>
 <p> <strong>摘要</strong></p>
 <p>Postfix 是一个标准的 MTA「Mail Transfer Agent」服务器，它负责通过 SMTP 协议管理发送到本机的邮件以及由本机发向外界的邮件；Dovecot 是一个优秀的 IMAP/POP 服务器用以接收外界发送到本机的邮件。本实验带您一步步搭建 Postfix、Dovecot 邮件服务。</p>
 <p> <strong>环境</strong></p>
 <p>CentOS 7.2 64 位</p>
 <a id="more"></a>
+
 <h2 id="1、准备域名"><a href="#1、准备域名" class="headerlink" title="1、准备域名"></a>1、准备域名</h2><p><strong>1）域名注册</strong></p>
 <p>可以到域名服务商去注册域名，例如：阿里云或者腾讯云都可以。</p>
 <p> <strong>2) 域名解析</strong></p>
@@ -247,11 +245,13 @@ var _hmt = _hmt || [];
 <p> <strong>3)生效检查</strong></p>
 <p>域名设置解析后需要过一段时间才会生效，通过 <code>ping</code> 命令检查域名是否生效，如：</p>
 <figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ping</span> yourdomain.com</span><br></pre></td></tr></table></figure>
+
 <p>如果 ping 命令返回的信息中含有你设置的解析的 IP 地址，说明解析成功。</p>
 <p>（使用 <code>ctrl + c</code> 停止）</p>
 <p><strong>4)检查 MX 记录</strong></p>
 <p>替换下面命令中的 <code>yourdomain.com</code> 为您自己的注册的域名：</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup <span class="attribute">-q</span>=mx yourdomain.com</span><br></pre></td></tr></table></figure>
+
 <p>如果 nslookup 命令返回的信息中含有你设置的域名的记录值，说明解析成功。</p>
 <blockquote>
 <p>注意替换下面命令中的 <code>yourdomain.com</code> 为您自己的注册的域名</p>
@@ -265,23 +265,27 @@ var _hmt = _hmt || [];
 <p> <strong>2) Postfix、Dovecot 安装</strong></p>
 <p>在 CentOS 7 上，我们可以直接使用 <code>yum</code> 进行下载安装：</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> postfix dovecot</span><br></pre></td></tr></table></figure>
+
 <h2 id="3、Postfix"><a href="#3、Postfix" class="headerlink" title="3、Postfix"></a>3、Postfix</h2><p> <strong>配置 Postfix</strong></p>
-<p>有关教程中配置参数的具体含义，请参照 <a href="http://www.postfix.org/documentation.html" target="_blank" rel="noopener">Postfix 配置文档</a>。</p>
+<p>有关教程中配置参数的具体含义，请参照 <a target="_blank" rel="noopener" href="http://www.postfix.org/documentation.html">Postfix 配置文档</a>。</p>
 <p> <strong>1) 配置</strong></p>
 <p>在终端中输入以下命令以修改 Postfix 相关配置：</p>
 <p>注意：<strong>记得将 <code>yourdomain.com</code> 替换为你自己的域名</strong></p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">postconf</span> -e <span class="string">'myhostname = server.yourdomain.com'</span></span><br><span class="line">postconf -e <span class="string">'mydestination = localhost, localhost.localdomain'</span></span><br><span class="line">postconf -e <span class="string">'myorigin = <span class="variable">$mydomain</span>'</span></span><br><span class="line">postconf -e <span class="string">'mynetworks = 127.0.0.0/8'</span></span><br><span class="line">postconf -e <span class="string">'inet_interfaces = all'</span></span><br><span class="line">postconf -e <span class="string">'inet_protocols = all'</span></span><br><span class="line">postconf -e <span class="string">'mydestination = <span class="variable">$myhostname</span>, localhost.<span class="variable">$mydomain</span>, localhost, <span class="variable">$mydomain</span>'</span></span><br><span class="line">postconf -e <span class="string">'home_mailbox = Maildir/'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_sasl_type = dovecot'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_sasl_path = private/auth'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_sasl_auth_enable = yes'</span></span><br><span class="line">postconf -e <span class="string">'broken_sasl_auth_clients = yes'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_sasl_authenticated_header = yes'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_use_tls = yes'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_tls_cert_file = /etc/pki/dovecot/certs/dovecot.pem'</span></span><br><span class="line">postconf -e <span class="string">'smtpd_tls_key_file = /etc/pki/dovecot/private/dovecot.pem'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">postconf -e <span class="symbol">&#x27;myhostname</span> = server.yourdomain.com&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;mydestination</span> = localhost, localhost.localdomain&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;myorigin</span> = $mydomain&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;mynetworks</span> = <span class="number">127.0</span>.<span class="number">0.0</span>/<span class="number">8</span>&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;inet_interfaces</span> = <span class="keyword">all</span>&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;inet_protocols</span> = <span class="keyword">all</span>&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;mydestination</span> = $myhostname, localhost.$mydomain, localhost, $mydomain&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;home_mailbox</span> = Maildir/&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_sasl_type</span> = dovecot&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_sasl_path</span> = <span class="keyword">private</span>/auth&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_sasl_auth_enable</span> = yes&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;broken_sasl_auth_clients</span> = yes&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_sasl_authenticated_header</span> = yes&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_recipient_restrictions</span> = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_use_tls</span> = yes&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_tls_cert_file</span> = /etc/pki/dovecot/certs/dovecot.pem&#x27;</span><br><span class="line">postconf -e <span class="symbol">&#x27;smtpd_tls_key_file</span> = /etc/pki/dovecot/<span class="keyword">private</span>/dovecot.pem&#x27;</span><br></pre></td></tr></table></figure>
+
 <p>配置中 Postfix 使用 <strong>sasl</strong> 和 <strong>tls</strong> 来完成身份认证和传输信息加密。</p>
 <p>试验中使用了 Dovecot 默认的 <strong>ssl</strong> 证书和私钥，如果你需要修改为自己的，请替换最后两行配置的路径。</p>
 <p><strong>2) 配置 smtps</strong></p>
 <p>部分邮件客户端依赖于使用 465 端口提供加密连接，所以我们修改配置，允许 Postfix 使用 465 端口发送邮件。</p>
 <p>打开 <em>/etc/postfix/master.cf</em> 文件，将如下两行前的 <code>#</code> 去除：</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">smtps inet <span class="built_in">n</span> - <span class="built_in">n</span> - - smtpd</span><br><span class="line">-o smtpd_tls_wrappermode=yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">smtps inet n - n - - smtpd</span><br><span class="line">-o <span class="attribute">smtpd_tls_wrappermode</span>=<span class="literal">yes</span></span><br></pre></td></tr></table></figure>
+
 <p>（注意： <strong><code>-o</code> 前要保留空格</strong>）</p>
 <p>然后 <code>ctrl + s</code> 保存文件。</p>
 <p> <strong>3) 启动</strong></p>
 <p>使用以下命令，将 Postfix 设为自动启动并首次启动该服务：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">enable</span> <span class="selector-tag">postfix</span><span class="selector-class">.service</span></span><br><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">start</span>  <span class="selector-tag">postfix</span><span class="selector-class">.service</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="keyword">enable</span> postfix.service</span><br><span class="line">systemctl <span class="keyword">start</span>  postfix.service</span><br></pre></td></tr></table></figure>
+
 <p><strong>Postfix 日志</strong></p>
 <p>Postfix 系统的日志文件在系统的这个目录下的 <em>/var/log/maillog</em> 文件，此文件记录了 Postfix 服务器的运行状态信息。</p>
 <h2 id="4、Dovecot"><a href="#4、Dovecot" class="headerlink" title="4、Dovecot"></a>4、Dovecot</h2><p> <strong>配置 Dovecot</strong></p>
@@ -289,35 +293,44 @@ var _hmt = _hmt || [];
 <p>打开 <em>/etc/dovecot/dovecot.conf</em> 文件，在最下方加入以下配置：</p>
 <p><strong>示例代码：/etc/dovecot/dovecot.conf</strong></p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ssl_cert</span> = &lt;/etc/pki/dovecot/certs/dovecot.pem</span><br><span class="line"><span class="attr">ssl_key</span> = &lt;/etc/pki/dovecot/private/dovecot.pem</span><br><span class="line"></span><br><span class="line"><span class="attr">protocols</span> = imap pop3 lmtp</span><br><span class="line"><span class="attr">listen</span> = *</span><br><span class="line"><span class="attr">mail_location</span> = Maildir:~/Maildir</span><br><span class="line"><span class="attr">disable_plaintext_auth</span> = <span class="literal">no</span></span><br></pre></td></tr></table></figure>
+
 <p>如果前面你修改为了自己的 ssl 证书和私钥，请替换开始两行配置的路径。</p>
 <p>然后 <code>ctrl + s</code> 保存文件。</p>
 <p> <strong>修改 10-master.conf</strong></p>
 <p>打开 <em>/etc/dovecot/conf.d/10-master.conf</em> 文件，找到 <code>service auth</code> 部分，将以下行前面的 <code>#</code> 去除：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unix_listener <span class="meta-keyword">/var/</span>spool<span class="meta-keyword">/postfix/</span>private/<span class="class">auth </span>&#123;  </span><br><span class="line">       mode = <span class="number">0666</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unix_listener <span class="regexp">/var/</span>spool<span class="regexp">/postfix/</span><span class="keyword">private</span>/auth &#123;  </span><br><span class="line">       mode = <span class="number">0666</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>然后 <code>ctrl + s</code> 保存文件。</p>
 <p><strong>启动 Dovecot</strong></p>
 <p>使用以下命令，将 Dovecot 设为自动启动并首次启动该服务：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">enable</span> <span class="selector-tag">dovecot</span><span class="selector-class">.service</span></span><br><span class="line"><span class="selector-tag">systemctl</span> <span class="selector-tag">start</span>  <span class="selector-tag">dovecot</span><span class="selector-class">.service</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="keyword">enable</span> dovecot.service</span><br><span class="line">systemctl <span class="keyword">start</span>  dovecot.service</span><br></pre></td></tr></table></figure>
+
 <p>查看 <em>/var/log/maillog</em> 文件，查看服务是否成功启动。</p>
 <p>如成功启动，日志里应包含如下信息：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Jun 26 12:00:28 localhost postfix/postfix-script[28338]: starting the Postfix mail system</span><br><span class="line">Jun 26 12:00:29 localhost postfix/master[28340]: daemon started -- version 2.10.1, configuration /etc/postfix</span><br><span class="line">Jun 26 12:28:40 localhost dovecot: master: Dovecot v2.2.10 starting up <span class="keyword">for</span> imap, pop3, lmtp (core dumps disabled)</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Jun</span> <span class="number">26</span> <span class="number">12</span>:<span class="number">00</span>:<span class="number">28</span> localhost postfix/postfix-script[<span class="number">28338</span>]: starting the Postfix mail system</span><br><span class="line"><span class="attribute">Jun</span> <span class="number">26</span> <span class="number">12</span>:<span class="number">00</span>:<span class="number">29</span> localhost postfix/master[<span class="number">28340</span>]: daemon started -- version <span class="number">2</span>.<span class="number">10</span>.<span class="number">1</span>, configuration /etc/postfix</span><br><span class="line"><span class="attribute">Jun</span> <span class="number">26</span> <span class="number">12</span>:<span class="number">28</span>:<span class="number">40</span> localhost dovecot: master: Dovecot v<span class="number">2</span>.<span class="number">2</span>.<span class="number">10</span> starting up for imap, pop<span class="number">3</span>, lmtp (core dumps disabled)</span><br></pre></td></tr></table></figure>
+
 <h2 id="5、创建账户"><a href="#5、创建账户" class="headerlink" title="5、创建账户"></a>5、创建账户</h2><p>该配置下邮箱账户依赖于系统用户，所以通过添加系统用户的方式创建邮箱账户。</p>
 <p><strong>添加用户</strong></p>
 <p>在终端中使用 <code>useradd</code> 命令添加用户：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
 <p>使用 <code>passwd</code> 命令设置对应用户密码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="6、测试"><a href="#6、测试" class="headerlink" title="6、测试"></a>6、测试</h2><p>如测试中遇到异常，请查看 maillog 日志文件中的错误信息。</p>
 <p><strong>服务器端发送测试</strong></p>
 <p>使用 <code>su</code> 命令切换用户：</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">su</span> <span class="keyword">test</span></span><br></pre></td></tr></table></figure>
-<p>我们可以使用 <code>mail</code> 命令发送邮件，将 <a href="mailto:`xxxx@xxx.com" target="_blank" rel="noopener">`xxxx@xxx.com</a>` 替换为你的其他邮箱。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">echo</span> <span class="string">"Mail Content"</span> | mail -s <span class="string">"Mail Subject"</span> xxxx<span class="variable">@xxx</span>.com</span><br></pre></td></tr></table></figure>
+
+<p>我们可以使用 <code>mail</code> 命令发送邮件，将 [<code>xxxx@xxx.com](mailto:</code><a href="mailto:&#120;&#x78;&#120;&#x78;&#64;&#120;&#120;&#120;&#x2e;&#x63;&#x6f;&#109;">&#120;&#x78;&#120;&#x78;&#64;&#120;&#120;&#120;&#x2e;&#x63;&#x6f;&#109;</a>)` 替换为你的其他邮箱。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Mail Content&quot;</span> | mail -s <span class="string">&quot;Mail Subject&quot;</span> xxxx@xxx.<span class="keyword">com</span></span><br></pre></td></tr></table></figure>
+
 <p>然后可以前往你的接收方邮箱查收。</p>
 <p><strong>邮件客户端</strong></p>
-<p>你可以将该邮箱账户添加至邮件客户端使用，推荐使用 <a href="http://www.foxmail.com/" target="_blank" rel="noopener">Foxmail</a> 客户端。</p>
+<p>你可以将该邮箱账户添加至邮件客户端使用，推荐使用 <a target="_blank" rel="noopener" href="http://www.foxmail.com/">Foxmail</a> 客户端。</p>
 <p>可以参考以下配置进行设置：</p>
 <figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">服务器类型：`POP3`</span><br><span class="line">邮箱账户：  `test@yourdomain.com`</span><br><span class="line"></span><br><span class="line">收件(POP3)服务器：  `yourdomain.com`</span><br><span class="line">端口：              `995`</span><br><span class="line">安全连接(SSL)：     `是`</span><br><span class="line">用户名：            `test`</span><br><span class="line">密码：              `test用户密码`</span><br><span class="line"></span><br><span class="line">发件(SMTP)服务器：  `yourdomain.com`</span><br><span class="line">端口：              `465`</span><br><span class="line">安全连接(SSL)：     `是`</span><br><span class="line">用户名：            `test`</span><br><span class="line">密码：              `test用户密码`</span><br></pre></td></tr></table></figure>
+
 <p>然后就可以使用邮件客户端通过该账户收发邮件了。</p>
 <p>（该配置在某些邮件客户端下可能因为使用了通用证书而出现使用异常）</p>
 
@@ -381,7 +394,7 @@ var _hmt = _hmt || [];
  </li></ul>
    <ul><li><strong>版权声明：</strong>
    本作品采用
-   <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+   <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
    进行许可。转载请注明出处！
    
  </div>
@@ -519,7 +532,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、准备域名"><span class="toc-number">1.</span> <span class="toc-text">1、准备域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、搭建之前"><span class="toc-number">2.</span> <span class="toc-text">2、搭建之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、Postfix"><span class="toc-number">3.</span> <span class="toc-text">3、Postfix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、Dovecot"><span class="toc-number">4.</span> <span class="toc-text">4、Dovecot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、创建账户"><span class="toc-number">5.</span> <span class="toc-text">5、创建账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、测试"><span class="toc-number">6.</span> <span class="toc-text">6、测试</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%87%86%E5%A4%87%E5%9F%9F%E5%90%8D"><span class="toc-number">1.</span> <span class="toc-text">1、准备域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%90%AD%E5%BB%BA%E4%B9%8B%E5%89%8D"><span class="toc-number">2.</span> <span class="toc-text">2、搭建之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Postfix"><span class="toc-number">3.</span> <span class="toc-text">3、Postfix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81Dovecot"><span class="toc-number">4.</span> <span class="toc-text">4、Dovecot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%88%9B%E5%BB%BA%E8%B4%A6%E6%88%B7"><span class="toc-number">5.</span> <span class="toc-text">5、创建账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E6%B5%8B%E8%AF%95"><span class="toc-number">6.</span> <span class="toc-text">6、测试</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -598,13 +611,13 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-					&copy; 2020 无聊才读书
-					<span><a href="http://www.beian.miit.gov.cn/">吉ICP备16003940号</a></span>
+					&copy; 2021 无聊才读书
+					<span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">吉ICP备16003940号</a></span>
 					
 					<span id="busuanzi_container_site_pv">
 						本站总访问量<span id="busuanzi_value_site_pv"></span>次
 					</span>
-					<span><a href="https://cloud.tencent.com/product/tcb?from=12334"><strong>Powered By 云开发</strong></a></span>
+					<span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><strong>Powered By 云开发</strong></a></span>
 		</div>
       	<div class="footer-right">
 						<font face="STXingkai" ><strong>『 一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师 』</strong></font>
@@ -743,6 +756,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">弹性布局</a>
               </li>
              
@@ -752,6 +769,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">uni-app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -767,19 +804,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">uni-app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Radio组件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -791,7 +816,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">UI/UX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Adobe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">产品设计的演化过程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -800,6 +845,30 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">心灵鸡汤</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">心理学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">三阶魔方</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书单</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -819,11 +888,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人网盘</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -831,11 +900,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ShowDoc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+                <a href="javascript:void(0)" class="js-tag color5">个人网盘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -843,7 +916,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -859,71 +932,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">UI/UX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">心理学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计方法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Adobe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">产品设计的演化过程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">三阶魔方</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">designers</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">discuz Q</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
             
             <div class="clearfix"></div>

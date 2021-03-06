@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blogs.zhaozf.site">
   <title>如何在 Windows 上安装 Django并创建应用 | 无聊才读书 | 无聊才读书的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本文将指导您如何在 Windows 上安装 Python 3.7.4和 Django。它还提供了关于安装 virtualenv 和 virtualenvwrapper 的说明。这使得在 Python 项目中工作更加容易。这是为 Django 项目工作的用户提供的初学者指南，并不反映在为 Django 本身开发补丁时应该如何安装 Django。  本指南中的步骤已经在 Windows 7、8和1">
-<meta name="keywords" content="python,Django">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在 Windows 上安装 Django并创建应用">
 <meta property="og:url" content="https://blogs.zhaozf.site/7b73b3e5/index.html">
 <meta property="og:site_name" content="无聊才读书 | 无聊才读书的个人网站">
 <meta property="og:description" content="本文将指导您如何在 Windows 上安装 Python 3.7.4和 Django。它还提供了关于安装 virtualenv 和 virtualenvwrapper 的说明。这使得在 Python 项目中工作更加容易。这是为 Django 项目工作的用户提供的初学者指南，并不反映在为 Django 本身开发补丁时应该如何安装 Django。  本指南中的步骤已经在 Windows 7、8和1">
-<meta property="og:locale" content="default">
+<meta property="og:locale">
 <meta property="og:image" content="https://blogs.zhaozf.site/assets/blogImg/201910251755.jfif">
 <meta property="og:image" content="https://blogs.zhaozf.site/assets/blogImg/201910171811.png">
-<meta property="og:updated_time" content="2019-10-25T10:29:41.693Z">
+<meta property="article:published_time" content="2019-10-17T10:03:31.000Z">
+<meta property="article:modified_time" content="2019-10-25T10:29:41.693Z">
+<meta property="article:author" content="无聊才读书">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="Django">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何在 Windows 上安装 Django并创建应用">
-<meta name="twitter:description" content="本文将指导您如何在 Windows 上安装 Python 3.7.4和 Django。它还提供了关于安装 virtualenv 和 virtualenvwrapper 的说明。这使得在 Python 项目中工作更加容易。这是为 Django 项目工作的用户提供的初学者指南，并不反映在为 Django 本身开发补丁时应该如何安装 Django。  本指南中的步骤已经在 Windows 7、8和1">
 <meta name="twitter:image" content="https://blogs.zhaozf.site/assets/blogImg/201910251755.jfif">
   
     <link rel="alternative" href="/atom.xml" title="无聊才读书 | 无聊才读书的个人网站" type="application/atom+xml">
@@ -63,8 +64,8 @@ var _hmt = _hmt || [];
 	})();
 	</script> -->
 	
-</head>
-</html>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -77,10 +78,8 @@ var _hmt = _hmt || [];
 			<img src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">无聊才读书</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">道虽迩，不行不至；事虽小，不为不成。</p>
 		
 
 		<nav class="header-menu">
@@ -125,14 +124,14 @@ var _hmt = _hmt || [];
 		<nav style="margin: 60px;">
 			
 				<div >
-					<a href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
+					<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
 				</div>
 			
 		</nav>
 		
 		<!-- <nav class="header-menu">
 			<div class="social">
-				<a href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
+				<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
 			</div>
 		</nav> -->
 		
@@ -153,10 +152,8 @@ var _hmt = _hmt || [];
 				<img src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">无聊才读书</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>道虽迩，不行不至；事虽小，不为不成。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -226,30 +223,41 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/201910251755.jfif" alt></p>
+        <p><img src="/assets/blogImg/201910251755.jfif"></p>
 <blockquote>
 <p>本文将指导您如何在 Windows 上安装 Python 3.7.4和 Django。<br>它还提供了关于安装 virtualenv 和 virtualenvwrapper 的说明。<br>这使得在 Python 项目中工作更加容易。<br>这是为 Django 项目工作的用户提供的初学者指南，并不反映在为 Django 本身开发补丁时应该如何安装 Django。</p>
 </blockquote>
 <p>本指南中的步骤已经在 Windows 7、8和10中测试过了。 在其他版本中，步骤类似。 你将需要熟悉使用命令提示符。</p>
 <a id="more"></a>
 <h2 id="安装-Python"><a href="#安装-Python" class="headerlink" title="安装 Python"></a>安装 Python</h2><p>Django 是一个 Python web 框架，因此需要在机器上安装 Python。 在撰写本文时，使用的是Python 3.7.4版本。</p>
-<p>要在你的机器上安装 Python，请访问 google <a href="https://Python.org/downloads/" target="_blank" rel="noopener">https://Python.org/downloads/</a> 。 这个网站应该为你提供一个最新版本的 Python 下载按钮。 下载可执行安装程序并运行它。 选中“向 PATH 添加 Python 3.5”旁边的复选框，然后单击“立即安装”。</p>
+<p>要在你的机器上安装 Python，请访问 google <a target="_blank" rel="noopener" href="https://python.org/downloads/">https://Python.org/downloads/</a> 。 这个网站应该为你提供一个最新版本的 Python 下载按钮。 下载可执行安装程序并运行它。 选中“向 PATH 添加 Python 3.5”旁边的复选框，然后单击“立即安装”。</p>
 <p>安装完成后，打开命令提示符并检查 Python 版本是否与您通过执行以下命令安装的版本相匹配:</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">python</span> --<span class="keyword">version</span></span><br></pre></td></tr></table></figure>
+
+
 <h2 id="关于pip"><a href="#关于pip" class="headerlink" title="关于pip"></a>关于pip</h2><p>Pip 是 Python 的一个包管理。 它进行安装和卸载 Python 包(比如 Django!) 很简单。 对于安装的其余部分，我们将使用 pip 从命令行安装 Python 包。</p>
-<p>要在您的计算机上安装 pip，请转到安装 <a href="https://pip.pypa.io/en/latest/Installing/" target="_blank" rel="noopener">https://pip.pypa.io/en/latest/Installing/</a> ，并按照 get-pip.py 说明进行安装。</p>
+<p>要在您的计算机上安装 pip，请转到安装 <a target="_blank" rel="noopener" href="https://pip.pypa.io/en/latest/Installing/">https://pip.pypa.io/en/latest/Installing/</a> ，并按照 get-pip.py 说明进行安装。</p>
 <p>如果您正在使用 Python 22.7.9或 Python 33.4，或者您正在 virtualenv 或 pyvenv 创建的虚拟环境中工作，那么 pip 已经安装。 只需确保升级 pip 即可。</p>
-<h2 id="安装virtualenv-及virtualenvwrapper"><a href="#安装virtualenv-及virtualenvwrapper" class="headerlink" title="安装virtualenv 及virtualenvwrapper"></a>安装virtualenv 及virtualenvwrapper</h2><p>Virtualenv 和 virtualenvwrapper 为您创建的每个 Django 项目提供一个专用的环境。 虽然不是强制性的，但这被认为是最佳实践，并且在将来准备部署项目时将为您节省时间。 简单地输入:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> virtualenvwrapper-win</span><br></pre></td></tr></table></figure></p>
-<p>然后为你的项目创建一个虚拟环境:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mkvirtualenv myproject</span></span><br></pre></td></tr></table></figure></p>
-<p>虚拟环境将被自动激活，您将在命令提示符旁边看到“(myproject)”来指定该虚拟环境。 如果你启动一个新的命令提示符，你需要使用以下命令再次激活环境:<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">workon myproject</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="安装virtualenv-及virtualenvwrapper"><a href="#安装virtualenv-及virtualenvwrapper" class="headerlink" title="安装virtualenv 及virtualenvwrapper"></a>安装virtualenv 及virtualenvwrapper</h2><p>Virtualenv 和 virtualenvwrapper 为您创建的每个 Django 项目提供一个专用的环境。 虽然不是强制性的，但这被认为是最佳实践，并且在将来准备部署项目时将为您节省时间。 简单地输入:</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> virtualenvwrapper-win</span><br></pre></td></tr></table></figure>
+<p>然后为你的项目创建一个虚拟环境:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mkvirtualenv myproject</span></span><br></pre></td></tr></table></figure>
+<p>虚拟环境将被自动激活，您将在命令提示符旁边看到“(myproject)”来指定该虚拟环境。 如果你启动一个新的命令提示符，你需要使用以下命令再次激活环境:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">workon myproject</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="安装-Django"><a href="#安装-Django" class="headerlink" title="安装 Django"></a>安装 Django</h2><p>可以在虚拟环境中使用 pip 轻松地安装 Django。</p>
-<p>在命令提示符中，确保虚拟环境处于活动状态，并执行以下命令:<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> django</span><br></pre></td></tr></table></figure></p>
+<p>在命令提示符中，确保虚拟环境处于活动状态，并执行以下命令:</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> django</span><br></pre></td></tr></table></figure>
 <p>这将下载并安装最新的 Django 版本。</p>
 <p>安装完成后，您可以通过在命令提示符中执行 Django-admin – version 来验证您的 Django 安装。</p>
 <h2 id="编写你的第一个-Django-应用程序"><a href="#编写你的第一个-Django-应用程序" class="headerlink" title="编写你的第一个 Django 应用程序"></a>编写你的第一个 Django 应用程序</h2><h4 id="创建一个项目"><a href="#创建一个项目" class="headerlink" title="创建一个项目"></a>创建一个项目</h4><p>如果这是您第一次使用 Django，那么您必须处理一些初始设置。 也就是说，您需要自动生成一些代码来建立 Django 项目—— Django 实例的设置集合，包括数据库配置、特定于 Django 的选项和特定于应用程序的设置。</p>
-<p>从命令行中，cd 进入你想存储代码的目录，然后运行以下命令:<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">...</span>\&gt; django-admin startproject mysite</span><br></pre></td></tr></table></figure></p>
+<p>从命令行中，cd 进入你想存储代码的目录，然后运行以下命令:</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">...</span>\&gt; django-admin startproject mysite</span><br></pre></td></tr></table></figure>
 <p>这将在你的工作目录文件夹中创建一个 mysite 目录。 如果不起作用，请参阅运行 django-admin 的问题。</p>
-<p>让我们来看看 startproject 创建了什么:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysite/</span><br><span class="line">    manage.py</span><br><span class="line">    mysite/</span><br><span class="line">        __init__.py</span><br><span class="line">        settings.py</span><br><span class="line">        urls.py</span><br><span class="line">        wsgi.py</span><br></pre></td></tr></table></figure></p>
+<p>让我们来看看 startproject 创建了什么:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mysite</span>/</span><br><span class="line">    <span class="selector-tag">manage</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">mysite</span>/</span><br><span class="line">        __<span class="selector-tag">init__</span><span class="selector-class">.py</span></span><br><span class="line">        <span class="selector-tag">settings</span><span class="selector-class">.py</span></span><br><span class="line">        <span class="selector-tag">urls</span><span class="selector-class">.py</span></span><br><span class="line">        <span class="selector-tag">wsgi</span><span class="selector-class">.py</span></span><br></pre></td></tr></table></figure>
+
+
 <ul>
 <li>manage.py：命令行实用程序，允许您以各种方式与这个 django 项目交互。</li>
 <li>mysite/<strong>init</strong>.py: 一个空文件，它告诉 Python 这个目录应该被视为一个 Python 包。</li>
@@ -257,14 +265,19 @@ var _hmt = _hmt || [];
 <li>mysite/urls.py: 这个 Django 项目的 URL 声明; 您的 Django 驱动站点的“目录”。</li>
 <li>mysite/wsgi.py:为您的项目提供与 wsgi 兼容的 web 服务器的入口点。</li>
 </ul>
-<h2 id="开发服务器"><a href="#开发服务器" class="headerlink" title="开发服务器"></a>开发服务器</h2><p>让我们验证一下您的 Django 项目是否正常工作。 如果你还没有进入外部 mysite 目录，可以运行以下命令:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; py manage<span class="selector-class">.py</span> runserver</span><br></pre></td></tr></table></figure></p>
-<p>您将在命令行上看到以下输出:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Performing <span class="keyword">system</span> checks...</span><br><span class="line"></span><br><span class="line">System check identified no issues (<span class="number">0</span> silenced).</span><br><span class="line"></span><br><span class="line">You have unapplied migrations; your app may <span class="keyword">not</span> work properly <span class="keyword">until</span> they are applied.</span><br><span class="line">Run <span class="string">'python manage.py migrate'</span> <span class="built_in">to</span> apply them.</span><br><span class="line"></span><br><span class="line">October <span class="number">16</span>, <span class="number">2019</span> - <span class="number">15</span>:<span class="number">50</span>:<span class="number">53</span></span><br><span class="line">Django <span class="built_in">version</span> <span class="number">2.2</span>, <span class="keyword">using</span> settings <span class="string">'mysite.settings'</span></span><br><span class="line">Starting development server <span class="keyword">at</span> <span class="keyword">http</span>://<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8000</span>/</span><br><span class="line">Quit <span class="keyword">the</span> server <span class="keyword">with</span> CONTROL-C.</span><br></pre></td></tr></table></figure></p>
+<h2 id="开发服务器"><a href="#开发服务器" class="headerlink" title="开发服务器"></a>开发服务器</h2><p>让我们验证一下您的 Django 项目是否正常工作。 如果你还没有进入外部 mysite 目录，可以运行以下命令:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; <span class="keyword">py</span> manage.<span class="keyword">py</span> runserver</span><br></pre></td></tr></table></figure>
+<p>您将在命令行上看到以下输出:</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Performing<span class="keyword"> system</span> checks...</span><br><span class="line"></span><br><span class="line">System<span class="built_in"> check </span>identified no issues (0 silenced).</span><br><span class="line"></span><br><span class="line">You have unapplied migrations; your app may<span class="built_in"> not </span>work properly until they are applied.</span><br><span class="line">Run &#x27;python manage.py migrate&#x27; to apply them.</span><br><span class="line"></span><br><span class="line">October 16, 2019 - 15:50:53</span><br><span class="line">Django version 2.2, using settings &#x27;mysite.settings&#x27;</span><br><span class="line">Starting development server at http://127.0.0.1:8000/</span><br><span class="line">Quit the server with CONTROL-C.</span><br></pre></td></tr></table></figure>
 <p>您已经启动了 Django 开发服务器，这是一个纯粹用 Python 编写的轻量级 Web 服务器。 我们已经在 Django 中包含了这一点，这样您就可以快速开发，而无需配置生产服务器(比如 Apache) ，直到您准备好投入生产。</p>
 <p>现在是注意的好时机: 不要在任何类似于生产环境的环境中使用此服务器。 它只能在开发过程中使用。 (我们的业务是制作 Web 框架，而不是 Web 服务器。)</p>
-<p>现在服务器已经运行，可以使用 Web 浏览器访问 google <a href="http://127.0.0.1:8000/" target="_blank" rel="noopener">http://127.0.0.1:8000/</a> 。 你会看到一个“恭喜! ” 佩奇，火箭正在起飞。 成功了！</p>
-<p><img src="/assets/blogImg/201910171811.png" alt></p>
-<h4 id="①改变端口"><a href="#①改变端口" class="headerlink" title="①改变端口"></a>①改变端口</h4><p>默认情况下，runserver 命令在内部 IP 端口8000启动开发服务器。<br>如果要更改服务器端口，请将其作为命令行参数传递。 例如，这个命令在端口8080上启动服务器:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; py manage<span class="selector-class">.py</span> runserver <span class="number">8080</span></span><br></pre></td></tr></table></figure></p>
-<p>如果您想更改服务器的 IP，请将它与端口一起传递。 例如，要侦听所有可用的公共 ip (如果你正在运行 Vagrant 或者想在网络上的其他计算机上炫耀你的工作，这是很有用的) ，使用:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; <span class="selector-tag">py</span> <span class="selector-tag">manage</span><span class="selector-class">.py</span> <span class="selector-tag">runserver</span> 0<span class="selector-pseudo">:8000</span></span><br></pre></td></tr></table></figure></p>
+<p>现在服务器已经运行，可以使用 Web 浏览器访问 google <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> 。 你会看到一个“恭喜! ” 佩奇，火箭正在起飞。 成功了！</p>
+<p><img src="/assets/blogImg/201910171811.png"></p>
+<h4 id="①改变端口"><a href="#①改变端口" class="headerlink" title="①改变端口"></a>①改变端口</h4><p>默认情况下，runserver 命令在内部 IP 端口8000启动开发服务器。<br>如果要更改服务器端口，请将其作为命令行参数传递。 例如，这个命令在端口8080上启动服务器:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; <span class="keyword">py</span> manage.<span class="keyword">py</span> runserver <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+
+<p>如果您想更改服务器的 IP，请将它与端口一起传递。 例如，要侦听所有可用的公共 ip (如果你正在运行 Vagrant 或者想在网络上的其他计算机上炫耀你的工作，这是很有用的) ，使用:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; <span class="selector-tag">py</span> <span class="selector-tag">manage</span><span class="selector-class">.py</span> <span class="selector-tag">runserver</span> 0<span class="selector-pseudo">:8000</span></span><br></pre></td></tr></table></figure>
 <p>0是0.0.0.0的捷径。 开发服务器的完整文档可以在 runserver 参考中找到。</p>
 <h4 id="②运行服务器的自动重新加载"><a href="#②运行服务器的自动重新加载" class="headerlink" title="②运行服务器的自动重新加载"></a>②运行服务器的自动重新加载</h4><p>开发服务器根据需要为每个请求自动重新加载 Python 代码。 您不需要重新启动服务器，代码更改即可生效。 但是，像添加文件样的<br>操作不会触发重新启动，因此在这些情况下必须重新启动服务器。</p>
 <h2 id="创建投票应用程序"><a href="#创建投票应用程序" class="headerlink" title="创建投票应用程序"></a>创建投票应用程序</h2><p>现在您的环境(一个“项目”)已经设置好了，您就可以开始工作了。</p>
@@ -273,38 +286,44 @@ var _hmt = _hmt || [];
 <h2 id="项目-vs-应用程序"><a href="#项目-vs-应用程序" class="headerlink" title="项目 vs 应用程序"></a>项目 vs 应用程序</h2><p>项目和应用程序有什么区别？ 应用程序是一个 Web 应用程序，它可以做一些事情，比如 Weblog 系统、公共记录数据库或者一个简单的投票应用程序。 项目是针对特定网站的配置和应用程序的集合。 一个项目可以包含多个应用程序。 一个应用程序可以在多个项目中。</p>
 </blockquote>
 <p>你的应用程序可以在你的 Python 路径上的任何地方运行。 在本教程中，我们将在 manage.py 文件旁边创建我们的投票应用程序，这样它就可以作为自己的顶级模块导入，而不是 mysite 的子模块。</p>
-<p>要创建你的应用程序，确保你和 manage.py 在同一个目录下，然后输入以下命令:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; py manage<span class="selector-class">.py</span> startapp polls</span><br></pre></td></tr></table></figure></p>
-<p>这将创建一个目录民意调查，如下所示:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">polls/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations/</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure></p>
+<p>要创建你的应用程序，确保你和 manage.py 在同一个目录下，然后输入以下命令:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; <span class="keyword">py</span> manage.<span class="keyword">py</span> startapp polls</span><br></pre></td></tr></table></figure>
+
+<p>这将创建一个目录民意调查，如下所示:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">polls</span>/</span><br><span class="line">    __<span class="selector-tag">init__</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">admin</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">apps</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">migrations</span>/</span><br><span class="line">        __<span class="selector-tag">init__</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">models</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">tests</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">views</span><span class="selector-class">.py</span></span><br></pre></td></tr></table></figure>
 <p>这个目录结构将存放轮询应用程序。</p>
 <h2 id="写下你的第一个观点"><a href="#写下你的第一个观点" class="headerlink" title="写下你的第一个观点"></a>写下你的第一个观点</h2><p>让我们编写第一个视图。 打开文件 polls / views.py 并在其中放入以下 Python 代码:</p>
 <blockquote>
-<p>polls/views.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"Hello, world. You're at the polls index."</span>)</span><br></pre></td></tr></table></figure></p>
+<p>polls/views.py</p>
 </blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&quot;Hello, world. You&#x27;re at the polls index.&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>这是 Django 中最简单的视图。 要调用这个视图，我们需要将它映射到一个 URL ——为此我们需要一个 URLconf。</p>
-<p>要在 polls 目录中创建 URLconf，请创建一个名为 urls.py 的文件。 你的应用程序目录现在应该是这样的:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">polls/</span><br><span class="line">    __init__.py</span><br><span class="line">    admin.py</span><br><span class="line">    apps.py</span><br><span class="line">    migrations/</span><br><span class="line">        __init__.py</span><br><span class="line">    models.py</span><br><span class="line">    tests.py</span><br><span class="line">    urls.py</span><br><span class="line">    views.py</span><br></pre></td></tr></table></figure></p>
+<p>要在 polls 目录中创建 URLconf，请创建一个名为 urls.py 的文件。 你的应用程序目录现在应该是这样的:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">polls</span>/</span><br><span class="line">    __<span class="selector-tag">init__</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">admin</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">apps</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">migrations</span>/</span><br><span class="line">        __<span class="selector-tag">init__</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">models</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">tests</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">urls</span><span class="selector-class">.py</span></span><br><span class="line">    <span class="selector-tag">views</span><span class="selector-class">.py</span></span><br></pre></td></tr></table></figure>
 <p>在 polls / urls.py 文件中包含以下代码:</p>
 <blockquote>
-<p>polls/urls.py<br><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from django.urls <span class="keyword">import</span> <span class="built_in">path</span></span><br><span class="line"></span><br><span class="line">from . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    <span class="built_in">path</span>(<span class="string">''</span>, views.index, <span class="keyword">name</span>=<span class="string">'index'</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p>polls/urls.py</p>
 </blockquote>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> <span class="type">path</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, views.<span class="keyword">index</span>, <span class="type">name</span>=<span class="string">&#x27;index&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>下一步是将根 URLconf 指向 polls.url 模块。 在 mysite / urls.py 中，为 django.urls.include 添加一个导入，并在 urlpatterns 列表中插入一个 include () ，这样就可以:</p>
 <blockquote>
 <p>mysite/urls.py</p>
 </blockquote>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from django<span class="selector-class">.contrib</span> import admin</span><br><span class="line">from django<span class="selector-class">.urls</span> import include, path</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'polls/'</span>, include(<span class="string">'polls.urls'</span>)),</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin<span class="selector-class">.site</span><span class="selector-class">.urls</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> <span class="keyword">admin</span></span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> <span class="keyword">include</span>, <span class="type">path</span></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;polls/&#x27;</span>, <span class="keyword">include</span>(<span class="string">&#x27;polls.urls&#x27;</span>)),</span><br><span class="line">    path(<span class="string">&#x27;admin/&#x27;</span>, <span class="keyword">admin</span>.site.urls),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>函数允许引用其他 URLconfs。 无论 Django 遇到什么 include () ，它都会删除与该点匹配的 URL 的任何部分，并将剩余的字符串发送到包含的 URLconf 进行进一步处理。</p>
 <p>Include ()背后的思想是为了便于插入和播放 url。 因为民意调查是在它们自己的 URLconf (polls / urls.py)中，所以它们可以放在“ / polls / ” ，或者“ / fun polls / ” ，或者“ / content / polls / ” ，或者任何其他路径根目录下，这个应用程序仍然可以工作。</p>
 <blockquote>
 <h4 id="何时使用-include"><a href="#何时使用-include" class="headerlink" title="何时使用 include ()"></a>何时使用 include ()</h4><p>当您包含其他 URL 模式时，您应该始终使用 include ()。 Url 是唯一的例外。</p>
 </blockquote>
 <p>您现在已经将索引视图连接到 URLconf。 确认它正在使用以下命令:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; py manage<span class="selector-class">.py</span> runserver</span><br></pre></td></tr></table></figure>
-<p>在你的浏览器中进入 <a href="http://localhost:8000/polls/" target="_blank" rel="noopener">http://localhost:8000/polls/</a> ，你会看到文本“Hello, world. You’re at the polls index.” ，您在索引视图中定义的。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">...\&gt; <span class="keyword">py</span> manage.<span class="keyword">py</span> runserver</span><br></pre></td></tr></table></figure>
+<p>在你的浏览器中进入 <a target="_blank" rel="noopener" href="http://localhost:8000/polls/">http://localhost:8000/polls/</a> ，你会看到文本“Hello, world. You’re at the polls index.” ，您在索引视图中定义的。</p>
 <blockquote>
-<h4 id="页面没有找到？"><a href="#页面没有找到？" class="headerlink" title="页面没有找到？"></a>页面没有找到？</h4><p>如果你在这里得到一个错误页面，检查你要去的是 <a href="http://localhost:8000/polls/" target="_blank" rel="noopener">http://localhost:8000/polls/</a> ，而不是 <a href="http://localhost:8000/" target="_blank" rel="noopener">http://localhost:8000/</a> 。</p>
+<h4 id="页面没有找到？"><a href="#页面没有找到？" class="headerlink" title="页面没有找到？"></a>页面没有找到？</h4><p>如果你在这里得到一个错误页面，检查你要去的是 <a target="_blank" rel="noopener" href="http://localhost:8000/polls/">http://localhost:8000/polls/</a> ，而不是 <a target="_blank" rel="noopener" href="http://localhost:8000/">http://localhost:8000/</a> 。</p>
 </blockquote>
 <p>Path ()函数传递了四个参数，其中两个是必需的: route 和 view，两个是可选的: kwargs 和 name。 在这一点上，我们有必要回顾一下这些争论的目的。</p>
 <h3 id="path-argument-route"><a href="#path-argument-route" class="headerlink" title="path() argument: route"></a>path() argument: route</h3><p>Route 是一个包含 URL 模式的字符串。 当处理一个请求时，Django 从 urlpatterns 中的第一个模式开始，沿着列表一路向下，将请求的 URL 与每个模式进行比较，直到找到匹配的模式。</p>
-<p>模式不搜索 GET 和 POST 参数或域名。 例如，在对 myapp / <a href="https://www.example.com/myapp/" target="_blank" rel="noopener">https://www.example.com/myapp/</a> 的请求中，URLconf 将查找 myapp / 。 在 <a href="https://www.example.com/myapp/?page=3的请求中，URLconf" target="_blank" rel="noopener">https://www.example.com/myapp/?page=3的请求中，URLconf</a> 也会查找 myapp / 。</p>
+<p>模式不搜索 GET 和 POST 参数或域名。 例如，在对 myapp / <a target="_blank" rel="noopener" href="https://www.example.com/myapp/">https://www.example.com/myapp/</a> 的请求中，URLconf 将查找 myapp / 。 在 <a target="_blank" rel="noopener" href="https://www.example.com/myapp/?page=3%E7%9A%84%E8%AF%B7%E6%B1%82%E4%B8%AD%EF%BC%8CURLconf">https://www.example.com/myapp/?page=3的请求中，URLconf</a> 也会查找 myapp / 。</p>
 <h3 id="path-argument-view"><a href="#path-argument-view" class="headerlink" title="path() argument: view"></a>path() argument: view</h3><p>当 Django 找到一个匹配模式时，它调用指定的视图函数，其中以 HttpRequest 对象作为第一个参数，并将 route 中的任何“捕获”值作为关键字参数。 我们稍后会给出一个例子。</p>
 <h3 id="path-argument-kwargs"><a href="#path-argument-kwargs" class="headerlink" title="path() argument: kwargs"></a>path() argument: kwargs</h3><p>可以在字典中将任意关键字参数传递给目标视图。 我们不打算在本教程中使用 Django 的这个特性。</p>
 <h3 id="path-argument-name"><a href="#path-argument-name" class="headerlink" title="path() argument: name"></a>path() argument: name</h3><p>命名 URL 可以让您明确地从 Django 中的其他地方引用它，尤其是从模板中。 这个功能强大的特性允许您对项目的 URL 模式进行全局更改，同时只触及单个文件。</p>
@@ -370,7 +389,7 @@ var _hmt = _hmt || [];
  </li></ul>
    <ul><li><strong>版权声明：</strong>
    本作品采用
-   <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+   <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
    进行许可。转载请注明出处！
    
  </div>
@@ -574,13 +593,13 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-					&copy; 2020 无聊才读书
-					<span><a href="http://www.beian.miit.gov.cn/">吉ICP备16003940号</a></span>
+					&copy; 2021 无聊才读书
+					<span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">吉ICP备16003940号</a></span>
 					
 					<span id="busuanzi_container_site_pv">
 						本站总访问量<span id="busuanzi_value_site_pv"></span>次
 					</span>
-					<span><a href="https://cloud.tencent.com/product/tcb?from=12334"><strong>Powered By 云开发</strong></a></span>
+					<span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><strong>Powered By 云开发</strong></a></span>
 		</div>
       	<div class="footer-right">
 						<font face="STXingkai" ><strong>『 一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师 』</strong></font>
@@ -719,6 +738,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">弹性布局</a>
               </li>
              
@@ -728,6 +751,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">uni-app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -743,19 +786,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">uni-app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Radio组件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -767,7 +798,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">UI/UX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Adobe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">产品设计的演化过程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -776,6 +827,30 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">心灵鸡汤</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">心理学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">三阶魔方</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书单</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -795,11 +870,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人网盘</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -807,11 +882,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ShowDoc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+                <a href="javascript:void(0)" class="js-tag color5">个人网盘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -819,7 +898,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -835,71 +914,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">UI/UX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">心理学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计方法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Adobe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">产品设计的演化过程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">三阶魔方</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">designers</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">discuz Q</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
             
             <div class="clearfix"></div>

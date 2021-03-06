@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blogs.zhaozf.site">
   <title>Docker 搭建 Jenkins | 无聊才读书 | 无聊才读书的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.安装 DockerDocker 简介Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”LXC容器](Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。  Linux 容器：Linux Containers">
-<meta name="keywords" content="赵志富,赵志富的博客,zhaozf,无聊才读书的博客,无聊才读书,无聊才读书的个人网站,大前端,微信小程序,开发者,程序猿,程序媛,开源,es6,vue,react,webpack,ui,ux">
+  <meta name="description" content="1.安装 DockerDocker 简介Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器](Docker CE](https:&#x2F;&#x2F;www.docker.com&#x2F;community-edition) 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。  Linux 容器：Linux Containers">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 搭建 Jenkins">
 <meta property="og:url" content="https://blogs.zhaozf.site/770a69f8/index.html">
 <meta property="og:site_name" content="无聊才读书 | 无聊才读书的个人网站">
-<meta property="og:description" content="1.安装 DockerDocker 简介Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”LXC容器](Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。  Linux 容器：Linux Containers">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="1.安装 DockerDocker 简介Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器](Docker CE](https:&#x2F;&#x2F;www.docker.com&#x2F;community-edition) 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。  Linux 容器：Linux Containers">
+<meta property="og:locale">
 <meta property="og:image" content="https://camo.githubusercontent.com/a5004ae5bffb9a59384514fd88d3f18c47e1e0373bfda94a18b422e4a164d399/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67">
 <meta property="og:image" content="https://blogs.zhaozf.site/assets/blogImg/customize-jenkins.png">
 <meta property="og:image" content="https://blogs.zhaozf.site/assets/blogImg/create-first-admin-user.png">
-<meta property="og:updated_time" content="2020-11-29T14:39:23.035Z">
+<meta property="article:published_time" content="2020-11-29T13:39:49.000Z">
+<meta property="article:modified_time" content="2020-11-29T14:39:23.035Z">
+<meta property="article:author" content="无聊才读书">
+<meta property="article:tag" content="赵志富,赵志富的博客,zhaozf,无聊才读书的博客,无聊才读书,无聊才读书的个人网站,大前端,微信小程序,开发者,程序猿,程序媛,开源,es6,vue,react,webpack,ui,ux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker 搭建 Jenkins">
-<meta name="twitter:description" content="1.安装 DockerDocker 简介Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”LXC容器](Docker CE 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。  Linux 容器：Linux Containers">
 <meta name="twitter:image" content="https://camo.githubusercontent.com/a5004ae5bffb9a59384514fd88d3f18c47e1e0373bfda94a18b422e4a164d399/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67">
   
     <link rel="alternative" href="/atom.xml" title="无聊才读书 | 无聊才读书的个人网站" type="application/atom+xml">
@@ -64,8 +64,8 @@ var _hmt = _hmt || [];
 	})();
 	</script> -->
 	
-</head>
-</html>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -78,10 +78,8 @@ var _hmt = _hmt || [];
 			<img src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">无聊才读书</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">道虽迩，不行不至；事虽小，不为不成。</p>
 		
 
 		<nav class="header-menu">
@@ -126,14 +124,14 @@ var _hmt = _hmt || [];
 		<nav style="margin: 60px;">
 			
 				<div >
-					<a href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
+					<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
 				</div>
 			
 		</nav>
 		
 		<!-- <nav class="header-menu">
 			<div class="social">
-				<a href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
+				<a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><img src="/assets/guanggao.png" /></a>
 			</div>
 		</nav> -->
 		
@@ -154,10 +152,8 @@ var _hmt = _hmt || [];
 				<img src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI0HiaS7mzficVm9IMJAaU4udhbqpZeiah2SslM1pbRF4ZYPsqmJBU6xupr02QicYbiawU8bMWHlsACmrg/132" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">无聊才读书</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>道虽迩，不行不至；事虽小，不为不成。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -227,14 +223,16 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://camo.githubusercontent.com/a5004ae5bffb9a59384514fd88d3f18c47e1e0373bfda94a18b422e4a164d399/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67" alt></p>
-<h2 id="1-安装-Docker"><a href="#1-安装-Docker" class="headerlink" title="1.安装 Docker"></a>1.安装 Docker</h2><h3 id="Docker-简介"><a href="#Docker-简介" class="headerlink" title="Docker 简介"></a>Docker 简介</h3><p><a href="https://www.docker.com/community-edition" target="_blank" rel="noopener">Docker CE</a> 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”<a href="https://www.docker.com/community-edition" target="_blank" rel="noopener">LXC容器](Docker CE</a> 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。</p>
+        <p><img src="https://camo.githubusercontent.com/a5004ae5bffb9a59384514fd88d3f18c47e1e0373bfda94a18b422e4a164d399/68747470733a2f2f6a656e6b696e732e696f2f73697465732f64656661756c742f66696c65732f6a656e6b696e735f6c6f676f2e706e67"></p>
+<h2 id="1-安装-Docker"><a href="#1-安装-Docker" class="headerlink" title="1.安装 Docker"></a>1.安装 Docker</h2><h3 id="Docker-简介"><a href="#Docker-简介" class="headerlink" title="Docker 简介"></a>Docker 简介</h3><p><a target="_blank" rel="noopener" href="https://www.docker.com/community-edition">Docker CE</a> 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器](Docker CE](<a target="_blank" rel="noopener" href="https://www.docker.com/community-edition">https://www.docker.com/community-edition</a>) 是一个开源的应用级别的虚拟化工具，可以将任何应用包装在”[LXC容器)”中运行。</p>
 <blockquote>
 <p>Linux 容器：Linux Containers</p>
 </blockquote>
 <a id="more"></a>
+
 <h3 id="安装-curl-工具"><a href="#安装-curl-工具" class="headerlink" title="安装 curl 工具"></a>安装 curl 工具</h3><p>使用 [APT] 包管理工具安装 [cURL]：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt <span class="keyword">update</span> &amp;&amp; apt <span class="keyword">install</span> -y curl</span><br></pre></td></tr></table></figure>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt <span class="meta">update</span> <span class="variable">&amp;&amp;</span> apt install -y curl</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>APT: Debian Linux 的默认包管理工具</p>
 </blockquote>
@@ -243,6 +241,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h3><p>官方已经给出了适合 Linux 平台的自动安装脚本。因此想要安装 Docker，只需要运行下面的命令：</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL <span class="keyword">https</span>://<span class="built_in">get</span>.docker.com | bash -s docker <span class="comment">--mirror Aliyun</span></span><br></pre></td></tr></table></figure>
+
 <p>[?] 在上面的命令中，我们添加了[参数] <code>--mirror</code> 以使用[国内的安装包镜像]。</p>
 <blockquote>
 <p>–mirror Aliyun</p>
@@ -251,17 +250,21 @@ var _hmt = _hmt || [];
 <p>官方脚本支持的镜像参数有: Aliyun、AzureChinaCloud</p>
 </blockquote>
 <blockquote>
-<p>curl -fsSL <a href="https://get.docker.com/" target="_blank" rel="noopener">https://get.docker.com</a> | bash -s docker –mirror Aliyun</p>
+<p>curl -fsSL <a target="_blank" rel="noopener" href="https://get.docker.com/">https://get.docker.com</a> | bash -s docker –mirror Aliyun</p>
 </blockquote>
 <h2 id="2-添加-Docker-Hub-镜像加速"><a href="#2-添加-Docker-Hub-镜像加速" class="headerlink" title="2.添加 Docker Hub 镜像加速"></a>2.添加 Docker Hub 镜像加速</h2><p>您可以通过修改 daemon.json 配置文件来使用 Docker Hub 加速服务。</p>
 <h3 id="创建-daemon-json-文件"><a href="#创建-daemon-json-文件" class="headerlink" title="创建 daemon.json 文件"></a>创建 daemon.json 文件</h3><p>请在 <code>/etc/docker</code> 目录下创建 <em>daemon.json</em>。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch <span class="regexp">/etc/</span>docker<span class="regexp">/daemon.json</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch <span class="regexp">/etc/</span>docker/daemon.json</span><br></pre></td></tr></table></figure>
+
 <h3 id="编辑-daemon-json-文件"><a href="#编辑-daemon-json-文件" class="headerlink" title="编辑 daemon.json 文件"></a>编辑 daemon.json 文件</h3><p><em>编辑 /etc/docker/daemon.json</em>，添加镜像服务地址。腾讯云镜像的配置如下：</p>
-<h5 id="示例代码：-etc-docker-daemon-json"><a href="#示例代码：-etc-docker-daemon-json" class="headerlink" title="示例代码：/etc/docker/daemon.json"></a>示例代码：/etc/docker/daemon.json</h5><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"registry-mirrors"</span>: [<span class="string">"https://mirror.ccs.tencentyun.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="示例代码：-etc-docker-daemon-json"><a href="#示例代码：-etc-docker-daemon-json" class="headerlink" title="示例代码：/etc/docker/daemon.json"></a>示例代码：/etc/docker/daemon.json</h5><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://mirror.ccs.tencentyun.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="重新启动-Docker"><a href="#重新启动-Docker" class="headerlink" title="重新启动 Docker"></a>重新启动 Docker</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">systemctl daemon-reload</span></span><br><span class="line"><span class="attribute">systemctl restart docker</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-安装-Jenkins"><a href="#3-安装-Jenkins" class="headerlink" title="3.安装 Jenkins"></a>3.安装 Jenkins</h2><h3 id="Jenkins-简介"><a href="#Jenkins-简介" class="headerlink" title="Jenkins 简介"></a>Jenkins 简介</h3><p><a href="https://jenkins.io/" target="_blank" rel="noopener">Jenkins</a> 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+
+<h2 id="3-安装-Jenkins"><a href="#3-安装-Jenkins" class="headerlink" title="3.安装 Jenkins"></a>3.安装 Jenkins</h2><h3 id="Jenkins-简介"><a href="#Jenkins-简介" class="headerlink" title="Jenkins 简介"></a>Jenkins 简介</h3><p><a target="_blank" rel="noopener" href="https://jenkins.io/">Jenkins</a> 是一个开源软件项目，是基于 Java 开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
 <h3 id="获取-Jenkins-镜像"><a href="#获取-Jenkins-镜像" class="headerlink" title="获取 Jenkins 镜像"></a>获取 Jenkins 镜像</h3><p>Jenkins 官方镜像主要提供两个版本，分别是 [LTS] 版和[每周更新]版。本教程使用的是 LTS 版。</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull jenkins/<span class="string">jenkins:</span>lts</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">docker</span> <span class="selector-tag">pull</span> <span class="selector-tag">jenkins</span>/<span class="selector-tag">jenkins</span><span class="selector-pseudo">:lts</span></span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>Jenkins 发布的长期支持版：Long-term support</p>
 </blockquote>
@@ -269,7 +272,8 @@ var _hmt = _hmt || [];
 <p>Jenkins 每周发布一期软件更新的版本：weekly</p>
 </blockquote>
 <h3 id="启动-Jenkins-容器"><a href="#启动-Jenkins-容器" class="headerlink" title="启动 Jenkins 容器"></a>启动 Jenkins 容器</h3><p>使用 Docker 在宿主主机启动 Jenkins 容器：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name jenkins -<span class="selector-tag">p</span> <span class="number">8080</span>:<span class="number">8080</span> -<span class="selector-tag">p</span> <span class="number">50000</span>:<span class="number">50000</span> -v jenkins_home:/var/jenkins_home --restart always -d jenkins/jenkins:lts</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> run --name jenkins -p <span class="number">8080</span>:<span class="number">8080</span> -p <span class="number">50000</span>:<span class="number">50000</span> -v jenkins_home:/var/jenkins_home --restart always -d jenkins/jenkins:lts</span><br></pre></td></tr></table></figure>
+
 <h4 id="docker-run-附加参数说明："><a href="#docker-run-附加参数说明：" class="headerlink" title="docker run 附加参数说明："></a>docker run 附加参数说明：</h4><table>
 <thead>
 <tr>
@@ -278,8 +282,7 @@ var _hmt = _hmt || [];
 <th>用途</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>–name</td>
 <td>jenkins</td>
 <td>[命名]</td>
@@ -299,9 +302,8 @@ var _hmt = _hmt || [];
 <td>always</td>
 <td>[重启策略]</td>
 </tr>
-</tbody>
-</table>
-<p>有关更多配置方法请查看<a href="https://github.com/jenkinsci/docker/blob/master/README.md" target="_blank" rel="noopener">官方 Docker 文档</a>。</p>
+</tbody></table>
+<p>有关更多配置方法请查看<a target="_blank" rel="noopener" href="https://github.com/jenkinsci/docker/blob/master/README.md">官方 Docker 文档</a>。</p>
 <blockquote>
 <p>容器的名称: –name jenkins</p>
 </blockquote>
@@ -317,11 +319,12 @@ var _hmt = _hmt || [];
 <h3 id="访问-Jenkins-实例"><a href="#访问-Jenkins-实例" class="headerlink" title="访问 Jenkins 实例"></a>访问 Jenkins 实例</h3><p>在浏览器中打开 [http://&lt;您的  IP 地址&gt;:8080]即可浏览之前启动的 Jenkins 实例。</p>
 <h3 id="获取初始登录密码"><a href="#获取初始登录密码" class="headerlink" title="获取初始登录密码"></a>获取初始登录密码</h3><p>回到命令行，执行以下命令：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker exec jenkins \</span><br><span class="line">cat <span class="regexp">/var/</span>jenkins_home<span class="regexp">/secrets/i</span>nitialAdminPassword</span><br></pre></td></tr></table></figure>
+
 <p>从输出结果中获得的一串 Jenkins 初始密码，复制密码，回到 [http://&lt;您的 IP 地址&gt;:8080] 填入密码。</p>
 <h3 id="定制-Jenkins"><a href="#定制-Jenkins" class="headerlink" title="定制 Jenkins"></a>定制 Jenkins</h3><p>我们选择默认的 <strong>Install suggested plugins</strong> 来安装插件。</p>
-<p><img src="/assets/blogImg/customize-jenkins.png" alt></p>
+<p><img src="/assets/blogImg/customize-jenkins.png"></p>
 <h3 id="创建帐户"><a href="#创建帐户" class="headerlink" title="创建帐户"></a>创建帐户</h3><p>请根据引导页面的信息创建第一个管理员用户，之后即可开启 Jenkins 的世界。</p>
-<p><img src="/assets/blogImg/create-first-admin-user.png" alt></p>
+<p><img src="/assets/blogImg/create-first-admin-user.png"></p>
 <h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>恭喜，您已完成 Docker 搭建 Jenkins </p>
 
       
@@ -384,7 +387,7 @@ var _hmt = _hmt || [];
  </li></ul>
    <ul><li><strong>版权声明：</strong>
    本作品采用
-   <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+   <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
    进行许可。转载请注明出处！
    
  </div>
@@ -457,6 +460,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/1e39b68a/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          基于 Docker 容器部署discuz q论坛程序
+        
+      </div>
+    </a>
   
   
     <a href="/89d74aee/" id="article-nav-older" class="article-nav-link-wrap">
@@ -553,13 +565,13 @@ gitment.render('gitment-ctn')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-					&copy; 2020 无聊才读书
-					<span><a href="http://www.beian.miit.gov.cn/">吉ICP备16003940号</a></span>
+					&copy; 2021 无聊才读书
+					<span><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/">吉ICP备16003940号</a></span>
 					
 					<span id="busuanzi_container_site_pv">
 						本站总访问量<span id="busuanzi_value_site_pv"></span>次
 					</span>
-					<span><a href="https://cloud.tencent.com/product/tcb?from=12334"><strong>Powered By 云开发</strong></a></span>
+					<span><a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/tcb?from=12334"><strong>Powered By 云开发</strong></a></span>
 		</div>
       	<div class="footer-right">
 						<font face="STXingkai" ><strong>『 一个胸藏文墨怀若谷，腹有诗书气自华的前端工程师 』</strong></font>
@@ -698,6 +710,10 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">弹性布局</a>
               </li>
              
@@ -707,6 +723,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">uni-app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -722,19 +758,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">uni-app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Radio组件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">yarn</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -746,7 +770,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">UI/UX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Adobe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">产品设计的演化过程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计方法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -755,6 +799,30 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">心灵鸡汤</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">心理学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">三阶魔方</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书单</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -774,11 +842,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人网盘</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -786,11 +854,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ShowDoc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
+                <a href="javascript:void(0)" class="js-tag color5">个人网盘</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -798,7 +870,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+                <a href="javascript:void(0)" class="js-tag color4">树莓派</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -814,71 +886,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">UI/UX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">心理学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计方法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Adobe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">产品设计的演化过程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书单</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">三阶魔方</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Github Pages</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">designers</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">discuz Q</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
             
             <div class="clearfix"></div>
