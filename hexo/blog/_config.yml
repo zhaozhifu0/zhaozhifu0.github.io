@@ -85,15 +85,26 @@ plugin:
 feed:
   type: atom
   path: atom.xml
-  limit: 20
+  limit: 100
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+
+# deploy:
+#   type: rsync
+#   host: 175.24.112.81
+#   user: root
+#   root: /usr/local/nginx/  #/var/www/html  #远程主机的根目录
+#   port: 22
+#   delete: true    #删除远程主机上的旧文件
+#   verbose: true   #显示调试信息
+#   ignore_errors: false   #忽略错误
+
 deploy:
-  type: git
-  repo: 
-      github: git@github.com:zhaozhifu0/zhaozhifu0.github.io.git
-      coding: git@git.dev.tencent.com:zhaozhifu/zhaozhifu.git
-  branch: master
+ type: git
+ repo: 
+     github: git@github.com:zhaozhifu0/zhaozhifu0.github.io.git
+     coding: git@git.dev.tencent.com:zhaozhifu/zhaozhifu.git
+ branch: master
 
 #站点地图
 #sitemap:

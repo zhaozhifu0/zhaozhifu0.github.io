@@ -17,7 +17,7 @@ title: About me
 
  ## <img src="assets/info-circle-solid.svg" width="30px"> 个人信息 
 
- - 职位：web前端开发工程师
+ - 职位：知识收藏家、web前端开发工程师
 
 
 ## <img src="assets/graduation-cap-solid.svg" width="30px"> 教育经历
